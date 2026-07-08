@@ -77,6 +77,9 @@
   # start ssh to manage keys (for git authentication)
   programs.ssh.startAgent = true;
 
+  # enabling hyprland module
+  programs.hyprland.enable = true;
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;

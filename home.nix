@@ -11,6 +11,11 @@
       init.defaultBranch = "main";
     };
   };
+
+  # hyprland
+  wayland.windowManager.hyprland = {
+    enable = true;
+  };
   
   home.stateVersion = "26.05";
 }
