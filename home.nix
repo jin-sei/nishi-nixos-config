@@ -1,4 +1,8 @@
 { config, pkgs, ... }:
+let
+  mod = "SUPER";
+  terminal = "alacritty";
+in
 {
   # git
   programs.git = {
