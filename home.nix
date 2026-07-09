@@ -1,9 +1,4 @@
 { config, pkgs, ... }:
-let
-	mod = "SUPER";
-  	terminal = "alacritty";
-	# some colors ?
-in
 {
 
 # git
@@ -19,10 +14,41 @@ programs.git = {
 };
 
 # hyprland
-wayland.windowManager.hyprland.enable = true;
-home.file = {
-	".config/hyprland.lua".source = "./hyprland.lua";
+wayland.windowManager.hyprland = {
+	enable = true;
+	settings = {};
+	extraConfig = ''
+
+------------------
+---- MONITORS ----
+------------------
+
+hl.monitor({
+	output   = "",
+	mode     = "preferred",
+	position = "auto",
+	scale    = "1",
+})
+
+---------------------
+---- MY PROGRAMS ----
+---------------------
+
+local terminal = "alacritty"
+
+---------------------
+---- KEYBINDINGS ----
+---------------------
+
+local mainMod = "SUPER"
+
+hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(terminal))
+hl.bind(mainMod .. " + Q", hl.dsp.window.close())
+
+	'';
 };
 
+home.username = "jinsei";
+home.homeDirectory = "/home/jinsei";
 home.stateVersion = "26.05";
 }
