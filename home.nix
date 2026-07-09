@@ -24,12 +24,12 @@ in
 
     settings = {
 
-      monitor = [
+      monitor = [{
         output = "";
         mode = "preferred";
         position = "auto";
         scale = "1";
-      ];
+      }];
       
       bind = [
         (bind "SUPER + Q" dsp.close)
