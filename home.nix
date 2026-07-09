@@ -22,7 +22,7 @@ programs.git = {
 wayland.windowManager.hyprland.enable = true;
 home.file = {
 	".config/hyprland.lua".source = "./hyprland.lua";
-}
+};
 
 home.stateVersion = "26.05";
 }
