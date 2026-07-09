@@ -20,9 +20,9 @@ programs.git = {
 
 # hyprland
 wayland.windowManager.hyprland.enable = true;
-xdg.configFile."hypr/hyprland.lua".text = ''
-	${builtins.readFile ./hyprland.lua}
-'';
+home.file = {
+	".config/hyprland.lua".source = "./hyprland.lua";
+}
 
 home.stateVersion = "26.05";
 }
