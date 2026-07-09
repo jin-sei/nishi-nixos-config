@@ -15,6 +15,20 @@
   # hyprland
   wayland.windowManager.hyprland = {
     enable = true;
+    settings = {
+
+      "$terminal" = "alacritty";
+
+      "$mod" = "SUPER";
+
+      monitor = [",preferred,auto,1"];
+      
+      bind = [
+        "SUPER, Q, killactive"
+        "SUPER, T, exec, alacritty"
+      ];
+
+    };
   };
   
   home.stateVersion = "26.05";
