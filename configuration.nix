@@ -3,7 +3,7 @@
 {
   # Bootloader.
   boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/sda";
+  boot.loader.grub.device = "/dev/vda"; # "/dev/sda";
   boot.loader.grub.useOSProber = true;
 
   networking.hostName = "nishi"; 
@@ -59,9 +59,6 @@
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
-
-  # Virtualization on Virtualbox
-  virtualisation.virtualbox.host.enable = true;
 
   # Experimental features
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
