@@ -18,18 +18,22 @@ in
 
   # hyprland
   wayland.windowManager.hyprland = {
+
     enable = true;
+    configType = "lua";
+
     settings = {
 
-      "$terminal" = "alacritty";
-
-      "$mod" = "SUPER";
-
-      monitor = [",preferred,auto,1"];
+      monitor = [
+        output = "";
+        mode = "preferred";
+        position = "auto";
+        scale = "1";
+      ];
       
       bind = [
-        "SUPER, Q, killactive"
-        "SUPER, T, exec, alacritty"
+        (bind "SUPER + Q" dsp.close)
+        (bind "SUPER + T" (dsp.exec "alacritty"))
       ];
 
     };
