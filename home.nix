@@ -15,8 +15,23 @@ programs.git = {
 
 # hyprland
 xdg.configFile."hyprland" = {
-  source = ./dotfiles/hypr/hyprland.lua;
-  target = "hypr/hyprland.lua";
+	source = ./dotfiles/hypr/hyprland.lua;
+ 	target = "hypr/hyprland.lua";
+};
+
+# hyprpaper
+services.hyprpaper = {
+	enable = true;
+	settings = {
+  		splash = false;
+  		wallpaper = [
+    			{
+      			fit_mode = "cover";
+      			monitor = "";
+      			path = "${./misc/wallpapers/gray-undertow.jpeg}";
+    			}
+		];
+	};
 };
 
 home.username = "jinsei";

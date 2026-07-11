@@ -9,6 +9,14 @@ hl.monitor({
 	scale    = "1",
 })
 
+-------------------
+---- AUTOSTART ----
+-------------------
+
+hl.on("hyprland.start", function ()
+  hl.exec_cmd("hyprpaper")
+end)
+
 ---------------------
 ---- MY PROGRAMS ----
 ---------------------

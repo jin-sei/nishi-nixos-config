@@ -48,7 +48,9 @@
     isNormalUser = true;
     description = "jinsei";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
+    packages = with pkgs; [
+      hyprpaper
+    ];
   };
   
   home-manager = {
