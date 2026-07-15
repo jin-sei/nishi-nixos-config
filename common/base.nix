@@ -41,6 +41,7 @@
 	users.users."jinsei" = {
 		isNormalUser = true;
 		description = "jinsei";
+		useDefaultShell = true;
 		extraGroups = [ "networkmanager" "wheel" ];
 		# packages = with pkgs; [];
 	};
@@ -61,6 +62,10 @@
 	     	alacritty
 	     	vim 
 	];
+
+	# enable zsh system-wide to source necessary files
+	programs.zsh.enable = true;
+	users.defaultUserShell = pkgs.zsh;
 	
 	# start ssh to manage keys (for git authentication)
 	programs.ssh.startAgent = true;
