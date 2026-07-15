@@ -38,6 +38,14 @@
 			init.defaultBranch = "main";
 		};
 	};
+
+	# alacritty
+	programs.alacritty = {
+		enable = true;
+		settings = {
+			general.import = [ ../miscellaneous/themes/alacritty/iv-spade.toml ];
+		};
+	};
 	
 	# hyprland
 	xdg.configFile."hyprland" = {
@@ -63,6 +71,7 @@
 	# home manager (self-management)
 	programs.home-manager.enable = true;
 
+	# other home manager infos
 	home.username = "jinsei";
 	home.homeDirectory = "/home/jinsei";
 	home.stateVersion = "26.05";

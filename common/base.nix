@@ -59,7 +59,6 @@
 		git
 		wget
 	     	curl
-	     	alacritty
 	     	vim 
 	];
 
