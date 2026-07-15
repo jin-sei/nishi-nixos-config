@@ -14,7 +14,7 @@ hl.monitor({
 -------------------
 
 hl.on("hyprland.start", function ()
-  hl.exec_cmd("hyprpaper")
+	hl.exec_cmd("hyprpaper")
 end)
 
 ---------------------
@@ -35,10 +35,10 @@ hl.env("HYPRCURSOR_SIZE", "24")
 ----------------
 
 hl.config({
-    misc = {
-        force_default_wallpaper = 0,
-        disable_hyprland_logo   = true,
-    },
+	misc = {
+		force_default_wallpaper = 0,
+		disable_hyprland_logo   = true,
+	},
 })
 
 ---------------------
@@ -55,21 +55,21 @@ hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 ---------------
 
 hl.config({
-    input = {
-        kb_layout  = "fr",
-        kb_variant = "",
-        kb_model   = "",
-        kb_options = "",
-        kb_rules   = "",
-
-        follow_mouse = 1,
-
-        sensitivity = 0, -- -1.0 - 1.0, 0 means no modification.
-
-        touchpad = {
-            natural_scroll = false,
-        },
-    },
+	input = {
+		kb_layout  = "fr",
+		kb_variant = "",
+		kb_model   = "",
+		kb_options = "",
+		kb_rules   = "",
+		
+		follow_mouse = 1,
+		
+		sensitivity = 0, -- -1.0 - 1.0, 0 means no modification.
+		
+		touchpad = {
+			natural_scroll = false,
+		},
+	},
 })
 
 -----------------------
@@ -77,50 +77,50 @@ hl.config({
 -----------------------
 
 hl.config({
-    general = {
-        gaps_in  = 1,
-        gaps_out = 1,
-
-        border_size = 1,
-
-        col = {
-            active_border   = "rgba(595959aa)",
-            inactive_border = "rgba(595959aa)",
-        },
-
-        -- Set to true to enable resizing windows by clicking and dragging on borders and gaps
-        resize_on_border = false,
-
-        -- Please see https://wiki.hypr.land/Configuring/Advanced-and-Cool/Tearing/ before you turn this on
-        allow_tearing = false,
-
-        layout = "dwindle",
-    },
-
-    decoration = {
-        rounding = 1,
-
-        active_opacity   = 1.0,
-        inactive_opacity = 1.0,
-
-        shadow = {
-            enabled      = false, -- performance optimisation
-            range        = 4,
-            render_power = 3,
-            color        = 0xee1a1a1a,
-        },
-
-        blur = {
-            enabled   = false, -- performance optimisation
-            size      = 3,
-            passes    = 1,
-            vibrancy  = 0.1696,
-        },
-    },
-
-    animations = {
-        enabled = true,
-    },
+	general = {
+		gaps_in  = 1,
+		gaps_out = 1,
+		
+		border_size = 1,
+		
+		col = {
+			active_border   = "rgba(595959aa)",
+			inactive_border = "rgba(595959aa)",
+		},
+		
+		-- Set to true to enable resizing windows by clicking and dragging on borders and gaps
+		resize_on_border = false,
+		
+		-- Please see https://wiki.hypr.land/Configuring/Advanced-and-Cool/Tearing/ before you turn this on
+		allow_tearing = false,
+		
+		layout = "dwindle",
+	},
+	
+	decoration = {
+		rounding = 1,
+		
+		active_opacity   = 1.0,
+		inactive_opacity = 1.0,
+		
+		shadow = {
+			enabled      = false, -- performance optimisation
+			range        = 4,
+			render_power = 3,
+			color        = 0xee1a1a1a,
+		},
+		
+		blur = {
+			enabled   = false, -- performance optimisation
+			size      = 3,
+			passes    = 1,
+			vibrancy  = 0.1696,
+		},
+	},
+	
+	animations = {
+		enabled = true,
+	},
 })
 
 -- curves
