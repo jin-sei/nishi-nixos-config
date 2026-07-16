@@ -59,6 +59,7 @@
 		git
 		wget
 	     	curl
+		gdu
 	     	vim 
 	];
 

@@ -6,6 +6,14 @@
 		hyprpaper
   	];
 	
+	# nix helper (nh)
+	programs.nh = {
+		enable = true;
+		clean.enable = true;
+		clean.extraArgs = "--keep-since 7d --keep 10";
+		flake = "/home/jinsei/nishi-nixos-config"; # sets NH_OS_FLAKE variable for you
+	};	
+	
 	# zsh
 	programs.zsh = {
 		enable = true;
@@ -35,7 +43,7 @@
 		settings = {
 
 			format = "$username$hostname$directory$git_branch$git_status$line_break$character";
-			add_newline = false;
+			add_newline = true;
 
 			character = {
 				success_symbol = "[\\$>](bold green)";
@@ -99,9 +107,9 @@
 	# alacritty
 	programs.alacritty = {
 		enable = true;
-		settings = {
-			general.import = [ ../miscellaneous/themes/alacritty/iv-spade.toml ];
-			general.working_directory = "None";
+		settings.general = {
+			import = [ ../miscellaneous/themes/alacritty/iv-spade.toml ];
+			working_directory = "None";
 		};
 	};
 	
