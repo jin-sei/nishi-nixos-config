@@ -32,6 +32,56 @@
 	programs.starship = {
 		enable = true;
 		enableZshIntegration = true;
+		settings = {
+
+			format = "$username$hostname$directory$git_branch$git_status$line_break$character";
+			add_newline = false;
+
+			character = {
+				success_symbol = "[\\$>](bold green)";
+				error_symbol = "[\\$>](bold red)"; 
+			};
+
+			username = {
+				show_always = true;
+				format = "[$user]($style)";
+			};
+			
+			hostname = {
+				ssh_only = false;
+				format = "@[$hostname]($style) "; 
+			};
+			
+			directory = {
+				format = "[$path]($style)";
+				truncation_length = 1;
+      				truncation_symbol = "";
+      				truncate_to_repo = false;
+				read_only = "(RO) "; 
+			};
+			
+			git_branch = {
+				symbol = ""; 
+				format = ":[$branch]($style) ";
+			};
+			
+			git_status = {
+				format = "([$all_status$ahead_behind]($style) )";
+				conflicted = "=";
+				ahead = ">";
+				behind = "<";
+				diverged = "<>";
+				untracked = "?";
+				modified = "!";
+				staged = "+";
+				renamed = "r";
+				deleted = "x";
+				stashed = "$";
+			};
+			
+			# disables the package module which usually injects a box icon
+			package.disabled = true; 
+		};
 	};
 	
 	# git
