@@ -27,6 +27,12 @@
     			# theme = "robbyrussell";
   		};
 	};
+
+	# starship
+	programs.starship = {
+		enable = true;
+		enableZshIntegration = true;
+	};
 	
 	# git
 	programs.git = {
