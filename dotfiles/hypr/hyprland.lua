@@ -22,6 +22,8 @@ end)
 ---------------------
 
 local terminal = "alacritty"
+local launcher = "rofi -show drun"
+-- local files = ""
 
 -------------------------------
 ---- ENVIRONMENT VARIABLES ----
@@ -46,9 +48,42 @@ hl.config({
 ---------------------
 
 local mainMod = "SUPER"
+local altMod = "ALT"
 
+-- launching programs
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(terminal))
+hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(launcher))
+
+-- actions on windows
+hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
+hl.bind(mainMod .. " + M", hl.dsp.window.fullscreen({ action = "toggle" }))
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())
+
+-- Move/resize windows with mainMod (+ALT) + dragging
+hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(),   { mouse = true })
+hl.bind(mainMod .. " + " .. altMod .. " + mouse:272", hl.dsp.window.resize(), { mouse = true })
+
+-- move focus with mainMod + arrow keys
+hl.bind(mainMod .. " + left",  hl.dsp.focus({ direction = "left" }))
+hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))
+hl.bind(mainMod .. " + up",    hl.dsp.focus({ direction = "up" }))
+hl.bind(mainMod .. " + down",  hl.dsp.focus({ direction = "down" }))
+
+-- move active window to workspace +1 or -1 with maindMod + ALT + LEFT or RIGHT
+hl.bind(mainMod .. " + " .. altMod ..  " + left",     hl.dsp.window.move({ workspace = "-1" }))
+hl.bind(mainMod .. " + " .. altMod ..  " + right",     hl.dsp.window.move({ workspace = "+1" }))
+
+-- switch workspaces with mainMod + [0-9]
+-- move active window to a workspace with mainMod + altMod + [0-9]
+for i = 1, 10 do
+    local key = i % 10 -- 10 maps to key 0
+    hl.bind(mainMod .. " + " .. key,             hl.dsp.focus({ workspace = i}))
+    hl.bind(mainMod .. " + " .. altMod ..  " + " .. key,     hl.dsp.window.move({ workspace = i }))
+end
+
+-- special workspace
+hl.bind(mainMod .. " + S", hl.dsp.workspace.toggle_special("magic"))
+hl.bind(mainMod .. " + " .. altMod .. " + S", hl.dsp.window.move({ workspace = "special:magic" }))
 
 ---------------
 ---- INPUT ----

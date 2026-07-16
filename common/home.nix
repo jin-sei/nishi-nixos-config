@@ -15,6 +15,7 @@
 
 		shellAliases = {
   			ll = "ls -l";
+			gt = "git status && tree";
   			# update = "sudo nixos-rebuild switch";
 		};
 		history.size = 10000;
@@ -44,6 +45,7 @@
 		enable = true;
 		settings = {
 			general.import = [ ../miscellaneous/themes/alacritty/iv-spade.toml ];
+			general.working_directory = "None";
 		};
 	};
 	
