@@ -15,6 +15,7 @@ hl.monitor({
 
 hl.on("hyprland.start", function ()
 	hl.exec_cmd("hyprpaper")
+	hl.exec_cmd("hyprshot")
 end)
 
 ---------------------
@@ -54,6 +55,7 @@ local altMod = "ALT"
 -- launching programs
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(launcher))
+hl.bind("Print", hl.dsp.exec_cmd("hyprshot -m region --clipboard-only"))
 
 -- actions on windows
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
