@@ -24,6 +24,7 @@
 		shellAliases = {
   			ll = "ls -l";
 			gt = "git status && tree";
+			cow = "fortune | cowsay";
   			# update = "sudo nixos-rebuild switch";
 		};
 		history.size = 10000;
