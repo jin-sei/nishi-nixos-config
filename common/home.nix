@@ -112,6 +112,35 @@
 			working_directory = "None";
 		};
 	};
+
+	# gtk theme
+	gtk = {
+		enable = true;
+		colorScheme = "dark";
+		theme = {
+			name = "WhiteSur-gtk-theme";
+			package = pkgs.whitesur-gtk-theme;
+		};
+		iconTheme = {
+			name = "WhiteSur-dark";
+			package = pkgs.whitesur-icon-theme;
+		};
+	};
+
+	home.pointerCursor = {
+		gtk.enable = true;
+		x11.enable = true; 
+		name = "WhiteSur-cursors";
+		package = pkgs.whitesur-cursors;
+		size = 24;
+	};
+	
+	# qt theme (follows gtk)
+	qt = {
+		enable = true;
+		platformTheme.name = "gtk";
+		style.name = "gtk";
+	};
 	
 	# hyprland
 	xdg.configFile."hyprland" = {
