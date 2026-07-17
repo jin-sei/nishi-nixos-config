@@ -2,9 +2,12 @@
 
 {
 	# bootloader
-	 boot.loader.grub.enable = true;
- 	 boot.loader.grub.device = "/dev/vda"; # "/dev/sda";
- 	 boot.loader.grub.useOSProber = false;
+	 boot.loader.grub = { 
+		enable = true;
+ 	 	device = "/dev/vda"; # "/dev/sda";
+ 	 	useOSProber = false;
+		splashImage = null;
+	};
 	
 	# network hostname
  	 networking.hostName = "nishi-virtual"; 
