@@ -64,6 +64,11 @@
 		gdu
 	     	vim
 	];
+	
+	fonts.packages = with pkgs; [
+		nerd-fonts.fira-code
+		nerd-fonts.symbols-only
+	];
 
 	# enable zsh system-wide to source necessary files
 	programs.zsh.enable = true;
