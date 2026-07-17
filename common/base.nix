@@ -76,12 +76,17 @@
 	
 	# start ssh to manage keys (for git authentication)
 	programs.ssh.startAgent = true;
+
+	# gnupg (gpg)
+	programs.gnupg.agent = {
+		enable = true;
+	};
+			
+	# enable the OpenSSH daemon.
+	services.openssh.enable = true;
 	
 	# enabling hyprland module
 	programs.hyprland.enable = true;
-	
-	# enable the OpenSSH daemon.
-	services.openssh.enable = true;
 	
 	# enable ly login manager
 	services.displayManager.ly.enable = true;
