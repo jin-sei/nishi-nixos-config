@@ -113,6 +113,36 @@
 		};
 	};
 
+	# rofi
+	programs.rofi = {
+		enable = true;
+		theme = ../miscellaneous/themes/rofi/squared-dark.rasi; 
+		extraConfig = {
+			show-icons = false;
+		};
+	};
+	
+	# hyprland
+	xdg.configFile."hyprland" = {
+		source = ../dotfiles/hypr/hyprland.lua;
+	 	target = "hypr/hyprland.lua";
+	};
+	
+	# hyprpaper
+	services.hyprpaper = {
+		enable = true;
+		settings = {
+	  		splash = false;
+	  		wallpaper = [
+	    			{
+	      			fit_mode = "cover";
+	      			monitor = "";
+	      			path = "${../miscellaneous/wallpapers/gray-undertow.jpeg}";
+	    			}
+			];
+		};
+	};
+
 	# gtk theme
 	gtk = {
 		enable = true;
@@ -141,28 +171,7 @@
 		platformTheme.name = "gtk";
 		style.name = "gtk";
 	};
-	
-	# hyprland
-	xdg.configFile."hyprland" = {
-		source = ../dotfiles/hypr/hyprland.lua;
-	 	target = "hypr/hyprland.lua";
-	};
-	
-	# hyprpaper
-	services.hyprpaper = {
-		enable = true;
-		settings = {
-	  		splash = false;
-	  		wallpaper = [
-	    			{
-	      			fit_mode = "cover";
-	      			monitor = "";
-	      			path = "${../miscellaneous/wallpapers/gray-undertow.jpeg}";
-	    			}
-			];
-		};
-	};
-	
+
 	# home manager (self-management)
 	programs.home-manager.enable = true;
 
