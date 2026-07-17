@@ -2,14 +2,30 @@
 
 ## rebuild system wide
 
+using nixos-rebuild
+
 ```bash
 sudo nixos-rebuild switch --flake .#nishi-virtual
 ```
 
+with nix helper (nh) command
+
+```bash
+nh os switch -H nishi-virtual # -H flag is optional
+```
+
 ## rebuild user wide
+
+using home-manager
 
 ```bash
 home-manager switch --flake .#jinsei@nishi-virtual
+```
+
+with nix helper (nh) command
+
+```bash
+nh home switch -c jinsei@nishi-virtual # -c flag is optional
 ```
 
 ## useful commands
@@ -26,12 +42,3 @@ list generations
 nixos-rebuild --list-generations
 ```
 
-nix helper commands
-
-```bash
-# rebuild system, like nixos-rebuild switch
-nh os switch -H nishi-virtual # -H flag is optional
-
-# rebuild home, like home-manager switch
-nh home switch -c jinsei@nishi-virtual # -c flag is optional
-```
