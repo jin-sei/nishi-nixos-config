@@ -63,9 +63,6 @@
 
 		gdu
 	     	vim
-		
-		cowsay
-		fortune 
 	];
 
 	# enable zsh system-wide to source necessary files

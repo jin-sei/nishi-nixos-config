@@ -4,6 +4,12 @@
 	# packages
 	home.packages = with pkgs; [
 		hyprpaper
+		hyprpicker
+		hyprshot
+		wl-clipboard
+
+		fortune
+		cowsay
   	];
 	
 	# nix helper (nh)
