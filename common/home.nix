@@ -3,6 +3,7 @@
 {
 	# packages
 	home.packages = with pkgs; [
+		hyprpolkitagent
 		hyprpaper
 		hyprpicker
 		hyprshot
@@ -13,6 +14,24 @@
 		
 		neovim
   	];
+	
+	# services: hyprpolkitagent
+	systemd.user.services.hyprpolkitagent = {
+		Unit = {
+			Description = "Hyprland Polkit Agent";
+			After = [ "graphical-session.target" ]; 
+		};
+		Service = {
+			Type = "simple";
+			ExecStart = "${pkgs.hyprpolkitagent}/libexec/hyprpolkitagent";
+			Restart = "on-failure";
+			RestartSec = 1;
+			TimeoutStopSec = 10;
+		};
+		Install = {
+			WantedBy = [ "graphical-session.target" ];
+		};
+	};
 	
 	# nix helper (nh)
 	programs.nh = {

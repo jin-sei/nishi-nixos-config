@@ -109,6 +109,9 @@
 	# enable the OpenSSH daemon.
 	services.openssh.enable = true;
 	
+	# polkit (authentication)
+	security.polkit.enable = true;
+	
 	# enabling hyprland module
 	programs.hyprland = {
 		enable = true;
