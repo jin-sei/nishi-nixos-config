@@ -24,6 +24,7 @@
 	in
 	{
 		nixosConfigurations = {
+			# VIRT MANAGER MACHINE
 			nishi-virtual = nixpkgs.lib.nixosSystem {
 				specialArgs = {inherit inputs;};
 				modules = [
@@ -32,10 +33,20 @@
 					./hosts/virtual/hardware-configuration.nix
 				];
 			};
+			# DESKTOP	
+			nishi-desktop = nixpkgs.lib.nixosSystem {
+				specialArgs = {inherit inputs;};
+				modules = [
+					./common/base.nix
+					./hosts/desktop/default.nix
+					./hosts/desktop/hardware-configuration.nix
+				];
+			};
+
 		};
 		
 		homeConfigurations = {
-			"jinsei@nishi-virtual" = home-manager.lib.homeManagerConfiguration {
+			"jinsei" = home-manager.lib.homeManagerConfiguration {
 				inherit pkgs;
 				extraSpecialArgs = { inherit inputs; };
 				modules = [
