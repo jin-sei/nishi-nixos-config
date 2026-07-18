@@ -37,6 +37,31 @@
 	# Configure console keymap
 	console.keyMap = "fr";
 	
+	# FCITX input method (japanese keyboard)
+	i18n.inputMethod = {
+		enable = true;
+		type = "fcitx5";
+		fcitx5.addons = with pkgs; [
+			fcitx5-mozc
+			fcitx5-gtk
+		];
+	};
+	
+	# FCITX configuration
+	i18n.inputMethod.fcitx5.settings.inputMethod = {
+		GroupOrder."0" = "Default";
+		"Groups/0" = {
+			Name = "Default";
+			"Default Layout" = "fr";
+			DefaultIM = "mozc";
+		};
+		"Groups/0/Items/0".Name = "keyboard-fr";
+		"Groups/0/Items/1".Name = "mozc";
+	};
+	# i18n.inputMethod.fcitx5.settings.globalOptions = { };
+	# Local config at ~/.config/fcitx5 needs to be ignored using the following option.	
+	i18n.inputMethod.fcitx5.ignoreUserConfig = true;
+	
 	# Define a user account. Don't forget to set a password with ‘passwd’.
 	users.users."jinsei" = {
 		isNormalUser = true;
