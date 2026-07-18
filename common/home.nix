@@ -10,6 +10,8 @@
 
 		fortune
 		cowsay
+		
+		neovim
   	];
 	
 	# nix helper (nh)
