@@ -110,7 +110,18 @@
 	services.openssh.enable = true;
 	
 	# enabling hyprland module
-	programs.hyprland.enable = true;
+	programs.hyprland = {
+		enable = true;
+		withUWSM = true;
+    		xwayland.enable = true;
+		portalPackage = pkgs.xdg-desktop-portal-hyprland;
+	};
+
+	# xdg portal
+	xdg.portal = {
+    		enable = true;
+    		extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  	};
 	
 	# enable ly login manager
 	services.displayManager.ly.enable = true;
