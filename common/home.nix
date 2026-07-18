@@ -6,6 +6,7 @@
 		hyprpolkitagent
 		hyprlock
 		hyprpaper
+
 		hyprpicker
 		hyprshot
 		wl-clipboard
@@ -14,6 +15,7 @@
 		cowsay
 		
 		neovim
+		nautilus
   	];
 	
 	# services: hyprpolkitagent
