@@ -15,7 +15,6 @@ hl.monitor({
 
 hl.on("hyprland.start", function ()
 	hl.exec_cmd("hyprpaper")
-	hl.exec_cmd("hyprshot")
 end)
 
 ---------------------
@@ -25,7 +24,6 @@ end)
 local terminal 	= "alacritty"
 local files 	= "nautilus -w"
 local launcher 	= "rofi -show drun"
--- local files = ""
 
 -------------------------------
 ---- ENVIRONMENT VARIABLES ----
@@ -145,14 +143,14 @@ hl.config({
 		inactive_opacity = 1.0,
 		
 		shadow = {
-			enabled      = false, -- performance optimisation
+			enabled      = true, -- performance optimisation
 			range        = 4,
 			render_power = 3,
 			color        = 0xee1a1a1a,
 		},
 		
 		blur = {
-			enabled   = false, -- performance optimisation
+			enabled   = true, -- performance optimisation
 			size      = 3,
 			passes    = 1,
 			vibrancy  = 0.1696,

@@ -8,6 +8,13 @@
 			url = "github:nix-community/home-manager/release-26.05";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
+  		zen-browser = {
+    			url = "github:0xc000022070/zen-browser-flake";
+    			inputs = {
+      				nixpkgs.follows = "nixpkgs_unstable";
+      				home-manager.follows = "home-manager";
+    			};
+  		};
 	};
 	
 	outputs = {self, nixpkgs, nixpkgs_unstable, home-manager, ...}@inputs: 
@@ -33,6 +40,7 @@
 				extraSpecialArgs = { inherit inputs; };
 				modules = [
 					./common/home.nix
+					./modules/home/zen-browser.nix
 					# ajouter des fichiers de config home-manager spécifiques à chaque host: 
 					# ./hosts/desktop/home-desktop.nix
 				];
