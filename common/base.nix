@@ -112,6 +112,9 @@
 	# polkit (authentication)
 	security.polkit.enable = true;
 	
+	# pam (for hyprlock)
+	security.pam.services.hyprlock = {};
+	
 	# enabling hyprland module
 	programs.hyprland = {
 		enable = true;

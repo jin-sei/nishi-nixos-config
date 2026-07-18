@@ -4,6 +4,7 @@
 	# packages
 	home.packages = with pkgs; [
 		hyprpolkitagent
+		hyprlock
 		hyprpaper
 		hyprpicker
 		hyprshot
@@ -164,6 +165,22 @@
 	xdg.configFile."hyprland" = {
 		source = ../dotfiles/hypr/hyprland.lua;
 	 	target = "hypr/hyprland.lua";
+	};
+
+	# hyprlock
+	xdg.configFile."hyprlock" = {
+		source = ../dotfiles/hypr/hyprlock.conf;
+		target = "hypr/hyprlock.conf";
+	};
+	xdg.configFile."hyprlock-wallpaper" = {
+		target = "hypr/hyprlock-wallpaper.conf";
+		text = 
+		''
+		background {
+			monitor =
+			path = ${../miscellaneous/wallpapers/gray-undertow.jpeg}
+		}
+		'';
 	};
 	
 	# hyprpaper
