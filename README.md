@@ -42,3 +42,7 @@ list generations
 nixos-rebuild --list-generations
 ```
 
+bootstrap home-manager (new machine)
+```bash
+nix run github:nix-community/home-manager -- switch --flake .#jinsei
+```
