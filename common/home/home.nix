@@ -18,12 +18,17 @@
 		
 		neovim
 		nautilus
+		keepassxc
 	
 		ungoogled-chromium
 		signal-desktop
 		deezer-desktop
 		filen-desktop
 		discord
+		obsidian
+		anki
+
+		mpv
 		zathura
 		
 		proton-vpn
