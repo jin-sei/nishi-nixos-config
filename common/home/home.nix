@@ -18,8 +18,14 @@
 		
 		neovim
 		nautilus
-  	];
 	
+		signal-desktop
+		deezer-desktop
+		filen-desktop
+		discord
+		zathura
+  	];
+
 	# services: hyprpolkitagent
 	systemd.user.services.hyprpolkitagent = {
 		Unit = {
@@ -234,6 +240,9 @@
 
 	# home manager (self-management)
 	programs.home-manager.enable = true;
+	
+	# allow unfree packages
+	nixpkgs.config.allowUnfree = true;
 
 	# other home manager infos
 	home.username = "jinsei";
