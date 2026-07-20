@@ -53,6 +53,9 @@
 				extraSpecialArgs = { inherit inputs; };
 				modules = [
 					./common/home/home.nix
+					./common/home/shell.nix
+					./common/home/desktop-environment.nix
+					./common/home/apps.nix
 					./modules/home/zen-browser.nix
 					./modules/home/art-stuff.nix
 					./modules/home/heroic.nix
