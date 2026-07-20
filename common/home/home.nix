@@ -25,6 +25,9 @@
 		filen-desktop
 		discord
 		zathura
+		
+		proton-vpn
+		qbittorrent
   	];
 
 	# services: hyprpolkitagent
