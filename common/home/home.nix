@@ -151,7 +151,7 @@
 	programs.btop = {
 		enable = true;
 		settings = {
-			color_theme = "adapta";
+			color_theme = "TTY";
 			theme_background = false;
 
 		};

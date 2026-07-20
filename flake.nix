@@ -38,6 +38,7 @@
 				specialArgs = {inherit inputs;};
 				modules = [
 					./common/system/base.nix
+					./common/system/nvidia.nix
 					./hosts/desktop/default.nix
 					./hosts/desktop/hardware-configuration.nix
 				];

@@ -29,9 +29,15 @@ local launcher 	= "rofi -show drun"
 ---- ENVIRONMENT VARIABLES ----
 -------------------------------
 
+-- cursors
 hl.env("XCURSOR_SIZE", "24")
 hl.env("XCURSOR_THEME", "WhiteSur-Cursors")
 hl.env("HYPRCURSOR_SIZE", "24")
+
+-- nvidia
+hl.env("GBM_BACKEND", "nvidia-drm")
+hl.env("__GLX_VENDOR_LIBRARY_NAME", "nvidia")
+hl.env("LIBVA_DRIVER_NAME", "nvidia")
 
 ----------------
 ----  MISC  ----
