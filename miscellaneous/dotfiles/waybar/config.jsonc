@@ -102,7 +102,7 @@
         "tooltip": false, 
         //"format-source": "{volume}% ",
         //"format-source-muted": "",
-        "on-click": "pwctl set-mute @DEFAULT_SINK@ toggle",
+        "on-click": "wpctl set-mute @DEFAULT_SINK@ toggle",
         "on-click-right": "alacritty -e wiremix"
   }
 }
