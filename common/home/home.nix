@@ -21,7 +21,7 @@
 		neovim
 		nautilus
 		keepassxc
-	
+
 		ungoogled-chromium
 		signal-desktop
 		deezer-desktop
@@ -50,6 +50,10 @@
 	
 	# home manager (self-management)
 	programs.home-manager.enable = true;
+
+	# enable autostarts 
+	xdg.autostart.enable = true;
+	
 	
 	# allow unfree packages
 	nixpkgs.config.allowUnfree = true;

@@ -46,4 +46,26 @@
 			};
 		};
 	};
+	
+	# keepassxc
+	# programs.keepassxc = {
+	# 	enable = true;
+	# 	autostart = true;
+	# 	# all options:
+	# 	# https://github.com/keepassxreboot/keepassxc/blob/develop/src/core/Config.cpp
+	# 	settings = {
+	# 		Browser.Enabled = true;
+	# 		GUI = {
+	# 			MinimizeOnClose = true;
+	# 			MinimizeToTray = true;
+	# 			MinimizeOnStartup = true;
+	# 			ShowTrayIcon = true;
+	# 			ApplicationTheme = "dark";
+	# 		};
+	# 		Security = {
+	# 			ClearClipboardTimeout = 30;
+	# 			LockDatabaseIdleSeconds = 1800;
+	# 		};
+	# 	};
+	# };
 }
