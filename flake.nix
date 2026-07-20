@@ -41,6 +41,7 @@
 					./common/system/nvidia.nix
 					./hosts/desktop/default.nix
 					./hosts/desktop/hardware-configuration.nix
+					./modules/system/steam.nix
 				];
 			};
 
@@ -54,8 +55,7 @@
 					./common/home/home.nix
 					./modules/home/zen-browser.nix
 					./modules/home/art-stuff.nix
-					# ajouter des fichiers de config home-manager spécifiques à chaque host: 
-					# ./hosts/desktop/home-desktop.nix
+					./modules/home/heroic.nix
 				];
 			};
 		};

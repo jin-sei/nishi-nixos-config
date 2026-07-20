@@ -198,7 +198,7 @@
 		''
 		background {
 			monitor =
-			path = ${../../miscellaneous/wallpapers/gray-undertow.jpeg}
+			path = ${../../miscellaneous/wallpapers/grey-undertow.jpeg}
 		}
 		'';
 	};
@@ -212,7 +212,7 @@
 	    			{
 	      			fit_mode = "cover";
 	      			monitor = "";
-	      			path = "${../../miscellaneous/wallpapers/gray-undertow.jpeg}";
+	      			path = "${../../miscellaneous/wallpapers/grey-undertow.jpeg}";
 	    			}
 			];
 		};

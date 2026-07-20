@@ -28,5 +28,4 @@
 		# Specify package 
 		package = config.boot.kernelPackages.nvidiaPackages.stable;
 	};
-  
 }
