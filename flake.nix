@@ -53,6 +53,7 @@
 				modules = [
 					./common/home/home.nix
 					./modules/home/zen-browser.nix
+					./modules/home/art-stuff.nix
 					# ajouter des fichiers de config home-manager spécifiques à chaque host: 
 					# ./hosts/desktop/home-desktop.nix
 				];

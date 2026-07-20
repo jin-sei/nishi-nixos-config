@@ -19,6 +19,7 @@
 		neovim
 		nautilus
 	
+		ungoogled-chromium
 		signal-desktop
 		deezer-desktop
 		filen-desktop
