@@ -1,5 +1,5 @@
 {
-	description = "NISHI: NixOS config";
+	description = "Nishi: NixOS config";
 	
 	inputs = {
 		nixpkgs_unstable.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -28,7 +28,7 @@
 			nishi-virtual = nixpkgs.lib.nixosSystem {
 				specialArgs = {inherit inputs;};
 				modules = [
-					./common/base.nix
+					./common/system/base.nix
 					./hosts/virtual/default.nix
 					./hosts/virtual/hardware-configuration.nix
 				];
@@ -37,7 +37,7 @@
 			nishi-desktop = nixpkgs.lib.nixosSystem {
 				specialArgs = {inherit inputs;};
 				modules = [
-					./common/base.nix
+					./common/system/base.nix
 					./hosts/desktop/default.nix
 					./hosts/desktop/hardware-configuration.nix
 				];
@@ -50,7 +50,7 @@
 				inherit pkgs;
 				extraSpecialArgs = { inherit inputs; };
 				modules = [
-					./common/home.nix
+					./common/home/home.nix
 					./modules/home/zen-browser.nix
 					# ajouter des fichiers de config home-manager spécifiques à chaque host: 
 					# ./hosts/desktop/home-desktop.nix

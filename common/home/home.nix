@@ -142,7 +142,7 @@
 	programs.alacritty = {
 		enable = true;
 		settings.general = {
-			import = [ ../miscellaneous/themes/alacritty/iv-spade.toml ];
+			import = [ ../../miscellaneous/themes/alacritty/iv-spade.toml ];
 			working_directory = "None";
 		};
 	};
@@ -160,7 +160,7 @@
 	# rofi
 	programs.rofi = {
 		enable = true;
-		theme = ../miscellaneous/themes/rofi/squared-dark.rasi; 
+		theme = ../../miscellaneous/themes/rofi/squared-dark.rasi; 
 		extraConfig = {
 			show-icons = false;
 		};
@@ -168,13 +168,13 @@
 	
 	# hyprland
 	xdg.configFile."hyprland" = {
-		source = ../dotfiles/hypr/hyprland.lua;
+		source = ../../miscellaneous/dotfiles/hypr/hyprland.lua;
 	 	target = "hypr/hyprland.lua";
 	};
 
 	# hyprlock
 	xdg.configFile."hyprlock" = {
-		source = ../dotfiles/hypr/hyprlock.conf;
+		source = ../../miscellaneous/dotfiles/hypr/hyprlock.conf;
 		target = "hypr/hyprlock.conf";
 	};
 	xdg.configFile."hyprlock-wallpaper" = {
@@ -183,7 +183,7 @@
 		''
 		background {
 			monitor =
-			path = ${../miscellaneous/wallpapers/gray-undertow.jpeg}
+			path = ${../../miscellaneous/wallpapers/gray-undertow.jpeg}
 		}
 		'';
 	};
@@ -197,7 +197,7 @@
 	    			{
 	      			fit_mode = "cover";
 	      			monitor = "";
-	      			path = "${../miscellaneous/wallpapers/gray-undertow.jpeg}";
+	      			path = "${../../miscellaneous/wallpapers/gray-undertow.jpeg}";
 	    			}
 			];
 		};
