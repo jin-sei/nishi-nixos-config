@@ -27,7 +27,6 @@
 		deezer-desktop
 		filen-desktop
 		discord
-		obsidian
 		
 		(anki.withAddons [
     			ankiAddons.passfail2

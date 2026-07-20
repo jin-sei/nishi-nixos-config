@@ -32,4 +32,18 @@
 
 		};
 	};
+	
+	# obsidian
+	home.file."Vault/jinsei-obsidian/.obsidian/themes/OLED.Black".source = ../../miscellaneous/themes/obsidian;
+	programs.obsidian = {
+		enable = true;
+		vaults."jinsei-obsidian" = {
+			target = "/home/jinsei/Vault/jinsei-obsidian";
+			settings.appearance = {
+				accentColor = "#e3e3e3";
+				textFontFamily = "";
+				cssTheme = "OLED.Black";
+			};
+		};
+	};
 }
