@@ -132,6 +132,7 @@
 				email = "nils.rivaillon@protonmail.com";
 			};
 			init.defaultBranch = "main";
+			core.editor = "vim";
 		};
 	};
 
