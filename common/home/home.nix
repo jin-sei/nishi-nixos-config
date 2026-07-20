@@ -28,7 +28,11 @@
 		filen-desktop
 		discord
 		obsidian
-		anki
+		
+		(anki.withAddons [
+    			ankiAddons.passfail2
+			ankiAddons.anki-connect
+  		])
 
 		mpv
 		zathura
