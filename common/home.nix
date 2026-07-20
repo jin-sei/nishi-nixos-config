@@ -10,6 +10,8 @@
 		hyprpicker
 		hyprshot
 		wl-clipboard
+		gdu
+		wiremix
 
 		fortune
 		cowsay

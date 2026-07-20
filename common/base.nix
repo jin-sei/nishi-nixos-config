@@ -10,6 +10,15 @@
 	# Enable networking
 	networking.networkmanager.enable = true;
 	
+	# Pipewire (audio)
+	security.rtkit.enable = true;
+	services.pipewire = {
+		enable = true;
+		alsa.enable = true;
+		alsa.support32Bit = true;
+		pulse.enable = true;
+	};
+	
 	# Set your time zone.
 	time.timeZone = "Europe/Paris";
 	
@@ -66,7 +75,7 @@
 		isNormalUser = true;
 		description = "jinsei";
 		useDefaultShell = true;
-		extraGroups = [ "networkmanager" "wheel" ];
+		extraGroups = [ "networkmanager" "audio" "wheel" ];
 		# packages = with pkgs; [];
 	};
 	
@@ -85,7 +94,6 @@
 		wget
 	     	curl
 
-		gdu
 	     	vim
 	];
 	
