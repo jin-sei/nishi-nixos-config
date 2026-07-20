@@ -15,6 +15,8 @@ hl.monitor({
 
 hl.on("hyprland.start", function ()
 	hl.exec_cmd("hyprpaper")
+	hl.exec_cmd("swaync")
+	hl.exec_cmd("waybar")
 end)
 
 ---------------------
@@ -63,6 +65,12 @@ hl.bind(mainMod .. " + F", hl.dsp.exec_cmd(files))
 hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(launcher))
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("hyprlock"))
 hl.bind("Print", hl.dsp.exec_cmd("hyprshot -m region --clipboard-only"))
+
+-- controlling programs
+hl.bind(mainMod .. " + J", hl.dsp.exec_cmd("pkill -SIGUSR1 '^waybar$'"))
+hl.bind("F3", hl.dsp.exec_cmd("wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 5%+"))
+hl.bind("F2", hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"))
+hl.bind("F1", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"))
 
 -- actions on windows
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))

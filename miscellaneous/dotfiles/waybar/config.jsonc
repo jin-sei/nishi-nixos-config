@@ -15,8 +15,8 @@
         "tray",
         "network",
         "pulseaudio",
-        "backlight",
-        "battery",
+        //"backlight",
+        //"battery",
         "clock"
     ],
     "hyprland/window": {
@@ -94,14 +94,15 @@
         "tooltip": false, 
         "on-click-right": "alacritty -e nmtui"
     },
-      "pulseaudio": {
+      
+    "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
         "format": "音量:{volume}%",
         // "format-muted": "󰝟  {volume}%",
         "tooltip": false, 
         //"format-source": "{volume}% ",
         //"format-source-muted": "",
-        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
-        "on-click-right": "alacritty -e pulsemixer"
+        "on-click": "pwctl set-mute @DEFAULT_SINK@ toggle",
+        "on-click-right": "alacritty -e wiremix"
   }
 }

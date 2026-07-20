@@ -28,6 +28,18 @@
 		};
 	};
 	
+	# waybar
+	xdg.configFile."waybar" = {
+		source = ../../miscellaneous/dotfiles/waybar;
+	 	target = "waybar";
+	};
+	
+	# swaync (notifications)
+	xdg.configFile."swaync" = {
+		source = ../../miscellaneous/dotfiles/swaync;
+	 	target = "swaync";
+	};
+
 	# hyprland
 	xdg.configFile."hyprland" = {
 		source = ../../miscellaneous/dotfiles/hypr/hyprland.lua;
