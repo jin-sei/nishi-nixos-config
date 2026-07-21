@@ -50,7 +50,7 @@
 		homeConfigurations = {
 			"jinsei" = home-manager.lib.homeManagerConfiguration {
 				inherit pkgs;
-				extraSpecialArgs = { inherit inputs; };
+				extraSpecialArgs = {inherit inputs;};
 				modules = [
 					./common/home/home.nix
 					./common/home/shell.nix

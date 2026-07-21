@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
 	# services: hyprpolkitagent
@@ -22,7 +22,7 @@
 	# rofi
 	programs.rofi = {
 		enable = true;
-		theme = ../../miscellaneous/themes/rofi/squared-dark.rasi; 
+		theme = inputs.self + "/miscellaneous/themes/rofi/squared-dark.rasi";
 		extraConfig = {
 			show-icons = false;
 		};
@@ -30,25 +30,25 @@
 	
 	# waybar
 	xdg.configFile."waybar" = {
-		source = ../../miscellaneous/dotfiles/waybar;
+		source = inputs.self + "/miscellaneous/dotfiles/waybar";
 	 	target = "waybar";
 	};
 	
 	# swaync (notifications)
 	xdg.configFile."swaync" = {
-		source = ../../miscellaneous/dotfiles/swaync;
+		source = inputs.self + "/miscellaneous/dotfiles/swaync";
 	 	target = "swaync";
 	};
 
 	# hyprland
 	xdg.configFile."hyprland" = {
-		source = ../../miscellaneous/dotfiles/hypr/hyprland.lua;
+		source = inputs.self + "/miscellaneous/dotfiles/hypr/hyprland.lua";
 	 	target = "hypr/hyprland.lua";
 	};
 
 	# hyprlock
 	xdg.configFile."hyprlock" = {
-		source = ../../miscellaneous/dotfiles/hypr/hyprlock.conf;
+		source = inputs.self + "/miscellaneous/dotfiles/hypr/hyprlock.conf";
 		target = "hypr/hyprlock.conf";
 	};
 	xdg.configFile."hyprlock-wallpaper" = {
@@ -57,7 +57,7 @@
 		''
 		background {
 			monitor =
-			path = ${../../miscellaneous/wallpapers/grey-undertow.jpeg}
+			path = ${ inputs.self + "/miscellaneous/wallpapers/grey-undertow.jpeg" }
 		}
 		'';
 	};
@@ -71,7 +71,7 @@
 	    			{
 	      			fit_mode = "cover";
 	      			monitor = "";
-	      			path = "${../../miscellaneous/wallpapers/grey-undertow.jpeg}";
+	      			path = "${ inputs.self + "/miscellaneous/wallpapers/grey-undertow.jpeg" }";
 	    			}
 			];
 		};

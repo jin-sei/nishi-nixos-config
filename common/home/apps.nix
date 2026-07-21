@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
 	# git
@@ -18,7 +18,7 @@
 	programs.alacritty = {
 		enable = true;
 		settings.general = {
-			import = [ ../../miscellaneous/themes/alacritty/iv-spade.toml ];
+			import = [ (inputs.self + "/miscellaneous/themes/alacritty/iv-spade.toml") ];
 			working_directory = "None";
 		};
 	};
@@ -34,7 +34,7 @@
 	};
 	
 	# obsidian
-	home.file."Vault/jinsei-obsidian/.obsidian/themes/OLED.Black".source = ../../miscellaneous/themes/obsidian;
+	home.file."Vault/jinsei-obsidian/.obsidian/themes/OLED.Black".source = inputs.self + "/miscellaneous/themes/obsidian" ;
 	programs.obsidian = {
 		enable = true;
 		vaults."jinsei-obsidian" = {
@@ -45,6 +45,13 @@
 				cssTheme = "OLED.Black";
 			};
 		};
+	};
+		
+	# mpv
+	xdg.configFile."mpv/scripts/copy-secondary-subtitle.lua".source = inputs.self + "/miscellaneous/dotfiles/mpv/copy-secondary-subtitle.lua";
+	programs.mpv = {
+		enable = true;
+		scripts = [ pkgs.mpvScripts.mpvacious ];
 	};
 	
 	# keepassxc

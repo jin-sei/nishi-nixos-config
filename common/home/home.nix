@@ -20,6 +20,7 @@
 		
 		neovim
 		nautilus
+		zathura
 		keepassxc
 
 		ungoogled-chromium
@@ -33,9 +34,6 @@
 			ankiAddons.anki-connect
   		])
 
-		mpv
-		zathura
-		
 		proton-vpn
 		qbittorrent
   	];
