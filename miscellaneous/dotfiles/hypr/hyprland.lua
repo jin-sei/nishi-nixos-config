@@ -67,7 +67,7 @@ hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("hyprlock"))
 hl.bind("Print", hl.dsp.exec_cmd("hyprshot -m region --clipboard-only"))
 
 -- controlling programs
-hl.bind(mainMod .. " + J", hl.dsp.exec_cmd("pkill -SIGUSR1 '^waybar$'"))
+hl.bind(mainMod .. " + J", hl.dsp.exec_cmd("pkill -SIGUSR1 waybar"))
 hl.bind("F3", hl.dsp.exec_cmd("wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 5%+"))
 hl.bind("F2", hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"))
 hl.bind("F1", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"))
