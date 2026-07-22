@@ -1,4 +1,7 @@
 { config, pkgs, ... }:
+let
+	all_hosts = [ "nishi-desktop" ]; #  "nishi-laptop" ];
+in
 {
 	services.syncthing = {
 		enable = true;
@@ -13,38 +16,38 @@
 				theme = "black";
 			};
 			devices = {
-				"arshi-laptop" = { id = "N5GQ422-KVEUTOM-ZZXBVYL-POG5IG7-7WOBWDO-SHU3GHX-ZE6QCTR-NVAHZQN"; }; # à supprimer
 				# "nishi-laptop" = { id = "DEVICE-ID-GOES-HERE"; };
+				"nishi-desktop" = { id = "5NLDEEF-5M4YY3D-IXQGK5P-QIMPYLN-A44TCEU-57BTIVS-6UCN63T-W32YXQB"; };
 				# "graphene-phone" = { id = "DEVICE-ID-GOES-HERE"; };
 			};
 			folders = {
 				"Documents" = {
 					path = "/home/jinsei/Documents";
-					devices = [ "arshi-laptop" ];
+					devices = all_hosts;
 			  	};
 				"Pictures" = {
 					path = "/home/jinsei/Pictures";
-					devices = [ "arshi-laptop" ];
+					devices = all_hosts;
 				};
 				"Music" = {
 					path = "/home/jinsei/Music";
-					devices = [ "arshi-laptop" ];
+					devices = all_hosts;
 				};
 				"Vault" = {
 					path = "/home/jinsei/Vault";
-					devices = [ "arshi-laptop" ];
+					devices =all_hosts; # all_hosts ++ [ "graphene-phone" ];
 				};
 				"Code" = {
 					path = "/home/jinsei/Code";
-					devices = [ "arshi-laptop" ];
+					devices =all_hosts;
 				};
 				"Desktop" = {
 					path = "/home/jinsei/Desktop";
-					devices = [ "arshi-laptop" ];
+					devices =all_hosts;
 				};
 				"Videoclub" = {
 					path = "/home/jinsei/Videos/Videoclub";
-					devices = [ "arshi-laptop" ];
+					devices =all_hosts;
 				};
 
 			};
