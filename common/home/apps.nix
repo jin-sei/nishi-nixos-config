@@ -34,7 +34,10 @@
 	};
 	
 	# obsidian
-	home.file."Vault/jinsei-obsidian/.obsidian/themes/OLED.Black".source = inputs.self + "/miscellaneous/themes/obsidian" ;
+	home.file."Vault/jinsei-obsidian/.obsidian/themes/OLED.Black" = {
+		source = inputs.self + "/miscellaneous/themes/obsidian" ;
+		recursive = true;
+	};
 	programs.obsidian = {
 		enable = true;
 		vaults."jinsei-obsidian" = {

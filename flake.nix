@@ -42,6 +42,7 @@
 					./hosts/desktop/default.nix
 					./hosts/desktop/hardware-configuration.nix
 					./modules/system/steam.nix
+					./modules/system/syncthing.nix
 				];
 			};
 
