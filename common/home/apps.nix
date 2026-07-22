@@ -51,11 +51,11 @@
 	};
 		
 	# mpv
-	xdg.configFile."mpv/scripts/copy-secondary-subtitle.lua".source = inputs.self + "/miscellaneous/dotfiles/mpv/copy-secondary-subtitle.lua";
-	programs.mpv = {
-		enable = true;
-		scripts = [ pkgs.mpvScripts.mpvacious ];
-	};
+	xdg.configFile."mpv/scripts".source = inputs.self + "/miscellaneous/dotfiles/mpv";
+	# programs.mpv = {
+	# 	enable = true;
+	# 	scripts = [ pkgs.mpvScripts.mpvacious ];
+	# };
 	
 	# keepassxc
 	# programs.keepassxc = {

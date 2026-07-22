@@ -20,6 +20,7 @@
 		
 		neovim
 		nautilus
+		mpv
 		zathura
 		keepassxc
 
