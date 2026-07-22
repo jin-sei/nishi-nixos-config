@@ -24,15 +24,6 @@
 	in
 	{
 		nixosConfigurations = {
-			# VIRT MANAGER MACHINE
-			nishi-virtual = nixpkgs.lib.nixosSystem {
-				specialArgs = {inherit inputs;};
-				modules = [
-					./common/system/base.nix
-					./hosts/virtual/default.nix
-					./hosts/virtual/hardware-configuration.nix
-				];
-			};
 			# DESKTOP	
 			nishi-desktop = nixpkgs.lib.nixosSystem {
 				specialArgs = {inherit inputs;};
@@ -45,7 +36,17 @@
 					./modules/system/syncthing.nix
 				];
 			};
-
+			# LAPTOP
+			nishi-laptop = nixpkgs.lib.nixosSystem {
+				specialArgs = {inherit inputs;};
+				modules = [
+					./common/system/base.nix
+					./common/system/nvidia.nix
+					./hosts/laptop/default.nix
+					./hosts/laptop/hardware-configuration.nix
+					./modules/system/syncthing.nix
+				];
+			};
 		};
 		
 		homeConfigurations = {
