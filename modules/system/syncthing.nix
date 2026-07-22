@@ -1,6 +1,6 @@
 { config, pkgs, ... }:
 let
-	all_hosts = [ "nishi-desktop" ]; #  "nishi-laptop" ];
+	all_hosts = [ "nishi-desktop" "nishi-laptop" ];
 in
 {
 	services.syncthing = {
@@ -16,7 +16,7 @@ in
 				theme = "black";
 			};
 			devices = {
-				# "nishi-laptop" = { id = "DEVICE-ID-GOES-HERE"; };
+				"nishi-laptop" = { id = "DS5CAWF-LBJV4IG-LUYX4RY-GTST3NT-ZBANZOR-6WPEWCB-YIX2EOS-R6JLKQY"; };
 				"nishi-desktop" = { id = "5NLDEEF-5M4YY3D-IXQGK5P-QIMPYLN-A44TCEU-57BTIVS-6UCN63T-W32YXQB"; };
 				# "graphene-phone" = { id = "DEVICE-ID-GOES-HERE"; };
 			};
