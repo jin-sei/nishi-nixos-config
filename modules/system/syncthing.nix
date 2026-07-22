@@ -42,6 +42,11 @@
 					path = "/home/jinsei/Desktop";
 					devices = [ "arshi-laptop" ];
 				};
+				"Videoclub" = {
+					path = "/home/jinsei/Videos/Videoclub";
+					devices = [ "arshi-laptop" ];
+				};
+
 			};
 		};
 	};
