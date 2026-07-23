@@ -51,7 +51,7 @@
 		};
 		
 		homeConfigurations = {
-			"jinsei" = home-manager.lib.homeManagerConfiguration {
+			"jinsei@nishi-desktop" = home-manager.lib.homeManagerConfiguration {
 				inherit pkgs;
 				extraSpecialArgs = {inherit inputs;};
 				modules = [
@@ -62,6 +62,19 @@
 					./modules/home/zen-browser.nix
 					./modules/home/art-stuff.nix
 					./modules/home/heroic.nix
+				];
+			};
+			"jinsei@nishi-laptop" = home-manager.lib.homeManagerConfiguration {
+				inherit pkgs;
+				extraSpecialArgs = {inherit inputs;};
+				modules = [
+					./common/home/home.nix
+					./common/home/shell.nix
+					./common/home/desktop-environment.nix
+					./common/home/apps.nix
+					./modules/home/zen-browser.nix
+					# ./modules/home/art-stuff.nix
+					# ./modules/home/heroic.nix
 				];
 			};
 		};
