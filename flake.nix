@@ -42,6 +42,7 @@
 				modules = [
 					./common/system/base.nix
 					./common/system/nvidia.nix
+					./modules/system/nvidia-prime.nix
 					./hosts/laptop/default.nix
 					./hosts/laptop/hardware-configuration.nix
 					./modules/system/syncthing.nix

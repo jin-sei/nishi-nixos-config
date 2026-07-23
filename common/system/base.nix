@@ -91,6 +91,7 @@
 		tree
 		git
 		
+		lshw
 		wget
 	     	curl
 
