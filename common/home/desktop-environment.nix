@@ -199,7 +199,7 @@
 			package = pkgs.whitesur-icon-theme;
 		};
 	};
-
+	
 	home.pointerCursor = {
 		gtk.enable = true;
 		x11.enable = true; 
