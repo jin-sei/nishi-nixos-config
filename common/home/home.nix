@@ -6,7 +6,6 @@
 		hyprpolkitagent
 		hyprlock
 		hyprpaper
-		waybar
 		swaynotificationcenter
 
 		hyprpicker
