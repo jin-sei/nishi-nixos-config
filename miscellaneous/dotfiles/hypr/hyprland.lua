@@ -103,6 +103,38 @@ end
 hl.bind(mainMod .. " + S", hl.dsp.workspace.toggle_special("magic"))
 hl.bind(mainMod .. " + " .. altMod .. " + S", hl.dsp.window.move({ workspace = "special:magic" }))
 
+--------------------------------
+---- WINDOWS AND WORKSPACES ----
+--------------------------------
+
+hl.window_rule({
+	name = "float-on-magic",
+	match = {
+		workspace = "s[true]"
+	},
+	float = true;
+})
+
+hl.window_rule({
+	name = "floating-magic-terminal",
+	match = {
+		workspace = "s[true]",
+		class = "Alacritty"
+	},
+	center = true,
+	size = {800, 500};
+})
+
+hl.window_rule({
+	name = "floating-magic-protonvpn",
+	match = {
+		workspace = "s[true]",
+		class = "proton.vpn.app.gtk"
+	},
+	move = {1377, 203},
+	size = {450, 700};
+})
+
 ---------------
 ---- INPUT ----
 ---------------
@@ -157,14 +189,14 @@ hl.config({
 		inactive_opacity = 1.0,
 		
 		shadow = {
-			enabled      = true, -- performance optimisation
+			enabled      = true,
 			range        = 4,
 			render_power = 3,
 			color        = 0xee1a1a1a,
 		},
 		
 		blur = {
-			enabled   = true, -- performance optimisation
+			enabled   = true,
 			size      = 3,
 			passes    = 1,
 			vibrancy  = 0.1696,
