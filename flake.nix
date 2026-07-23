@@ -43,9 +43,10 @@
 					./common/system/base.nix
 					./common/system/nvidia.nix
 					./modules/system/nvidia-prime.nix
+					./modules/system/syncthing.nix
+					./modules/system/laptop-utils.nix
 					./hosts/laptop/default.nix
 					./hosts/laptop/hardware-configuration.nix
-					./modules/system/syncthing.nix
 				];
 			};
 		};
