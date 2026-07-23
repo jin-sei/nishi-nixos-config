@@ -186,8 +186,13 @@
 		enable = true;
 		colorScheme = "dark";
 		theme = {
-			name = "WhiteSur-Dark-solid";
-			package = pkgs.whitesur-gtk-theme;
+			name = "Nightfox-Grey-Dark-Compact-Carbonfox";
+			package = pkgs.nightfox-gtk-theme.override {
+				themeVariants = [ "grey" ];
+				colorVariants = [ "dark" ];
+				sizeVariants = [ "compact" ];
+				tweakVariants = [ "carbonfox" "black" "macos" ];
+			};
 		};
 		iconTheme = {
 			name = "WhiteSur-dark";
