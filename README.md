@@ -43,6 +43,12 @@ nixos-rebuild --list-generations
 ```
 
 bootstrap home-manager (new machine)
+
 ```bash
 nix run github:nix-community/home-manager -- switch --flake .#jinsei
+```
+
+run with nvidia gpu 
+```bash
+nvidia-offload mpv JoJo_S01E01.mkv
 ```
