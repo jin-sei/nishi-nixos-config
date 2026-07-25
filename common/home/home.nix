@@ -13,6 +13,7 @@
 		wl-clipboard
 		gdu
 		wiremix
+		localsend
 
 		fortune
 		cowsay
