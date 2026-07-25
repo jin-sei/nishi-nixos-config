@@ -198,6 +198,25 @@
 			name = "WhiteSur-dark";
 			package = pkgs.whitesur-icon-theme;
 		};
+		gtk3.bookmarks = [
+			"file://${config.home.homeDirectory}/Downloads"
+			"file://${config.home.homeDirectory}/Desktop"
+			"file://${config.home.homeDirectory}/Documents"
+			"file://${config.home.homeDirectory}/Code"
+			"file://${config.home.homeDirectory}/Videos"
+			"file://${config.home.homeDirectory}/Pictures"
+			"file://${config.home.homeDirectory}/Music"
+			"file://${config.home.homeDirectory}/Vault"
+			"file://${config.home.homeDirectory}/nishi-nixos-config"
+		];
+	};
+		
+	dconf.settings = {
+		"org/gnome/nautilus/preferences" = {
+			default-folder-viewer = "icon-view";
+			show-image-thumbnails = "always";
+			thumbnail-limit = lib.gvariant.mkUint64 100;
+		};
 	};
 	
 	home.pointerCursor = {

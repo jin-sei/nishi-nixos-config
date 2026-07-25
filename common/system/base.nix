@@ -138,6 +138,12 @@
     		extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   	};
 	
+	# previews for nautilus (files)
+	services.gnome.sushi.enable = true;
+	environment.pathsToLink = [
+    		"share/thumbnailers"
+	];
+	
 	# enable ly login manager
 	services.displayManager.ly.enable = true;
 }
