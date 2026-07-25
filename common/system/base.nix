@@ -144,6 +144,9 @@
     		"share/thumbnailers"
 	];
 	
+	# enable nautilus to trash, mount 
+	services.gvfs.enable = true;
+	
 	# enable ly login manager
 	services.displayManager.ly.enable = true;
 }
