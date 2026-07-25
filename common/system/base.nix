@@ -9,6 +9,10 @@
 	
 	# Enable networking
 	networking.networkmanager.enable = true;
+
+	# for localsend		
+	networking.firewall.allowedTCPPorts = [ 53317 ];
+	networking.firewall.allowedUDPPorts = [ 53317 ];	
 	
 	# Pipewire (audio)
 	security.rtkit.enable = true;
