@@ -101,6 +101,10 @@ for i = 1, 10 do
     hl.bind(mainMod .. " + " .. altMod ..  " + code:" .. key+9,     hl.dsp.window.move({ workspace = i }))
 end
 
+--- cycling workspaces with tab
+hl.bind(altMod .. " + Tab", hl.dsp.focus({ workspace = "e+1" }))
+hl.bind(mainMod .. " + Tab", hl.dsp.focus({ workspace = "previous" }))
+
 -- special workspace
 hl.bind(mainMod .. " + S", hl.dsp.workspace.toggle_special("magic"))
 hl.bind(mainMod .. " + " .. altMod .. " + S", hl.dsp.window.move({ workspace = "special:magic" }))
