@@ -18,7 +18,7 @@ in
 			devices = {
 				"nishi-laptop" = { id = "DS5CAWF-LBJV4IG-LUYX4RY-GTST3NT-ZBANZOR-6WPEWCB-YIX2EOS-R6JLKQY"; };
 				"nishi-desktop" = { id = "5NLDEEF-5M4YY3D-IXQGK5P-QIMPYLN-A44TCEU-57BTIVS-6UCN63T-W32YXQB"; };
-				# "graphene-phone" = { id = "DEVICE-ID-GOES-HERE"; };
+				"graphene-phone" = { id = "74QRP2I-ZTBZVKT-KAS7RZV-FWC5CUT-XSWQ2MY-FNLILRH-42DSOHQ-6HLN3A5"; };
 			};
 			folders = {
 				"Documents" = {
@@ -35,7 +35,7 @@ in
 				};
 				"Vault" = {
 					path = "/home/jinsei/Vault";
-					devices =all_hosts; # all_hosts ++ [ "graphene-phone" ];
+					devices =all_hosts ++ [ "graphene-phone" ];
 				};
 				"Code" = {
 					path = "/home/jinsei/Code";

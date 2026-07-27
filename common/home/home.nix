@@ -14,6 +14,7 @@
 		gdu
 		wiremix
 		localsend
+		syncplay
 
 		fortune
 		cowsay
