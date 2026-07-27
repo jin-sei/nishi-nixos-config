@@ -45,10 +45,6 @@ in
 					path = "/home/jinsei/Desktop";
 					devices =all_hosts;
 				};
-				"Videoclub" = {
-					path = "/home/jinsei/Videos/Videoclub";
-					devices =all_hosts;
-				};
 
 			};
 		};
