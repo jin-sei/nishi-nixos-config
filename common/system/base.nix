@@ -95,9 +95,11 @@
 		tree
 		git
 		
-		lshw
+		lshw # list hardware
 		wget
 	     	curl
+		zip
+		unzip
 
 	     	vim
 	];
