@@ -15,6 +15,7 @@
 		wiremix
 		localsend
 		syncplay
+		android-tools
 
 		fortune
 		cowsay
