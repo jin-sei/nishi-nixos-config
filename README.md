@@ -49,6 +49,13 @@ nix run github:nix-community/home-manager -- switch --flake .#jinsei
 ```
 
 run with nvidia gpu 
+
 ```bash
 nvidia-offload mpv JoJo_S01E01.mkv
+```
+
+push to graphene phone with adb
+
+```bash
+adb push ~/Video/folder/file.mp4 /storage/self/primary/Movies
 ```
