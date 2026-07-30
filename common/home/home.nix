@@ -39,6 +39,7 @@
   		])
 
 		proton-vpn
+		proton-pass
 		qbittorrent
   	];
 
