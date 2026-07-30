@@ -17,6 +17,7 @@
 			"https://moodle.utc.fr"
 			"https://utc.fr"
 			"https://account.proton.me"
+			"https://pass.proton.me"
 			"https://app.todoist.com"
 			"https://mail.google.com"
 			"https://calendar.proton.me"
