@@ -24,7 +24,6 @@
 		nautilus
 			ffmpegthumbnailer
 			papers	
-		mpv
 		zathura
 		keepassxc
 

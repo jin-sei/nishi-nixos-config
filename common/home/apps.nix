@@ -52,10 +52,15 @@
 		
 	# mpv
 	xdg.configFile."mpv/scripts".source = inputs.self + "/miscellaneous/dotfiles/mpv";
-	# programs.mpv = {
-	# 	enable = true;
-	# 	scripts = [ pkgs.mpvScripts.mpvacious ];
-	# };
+	programs.mpv = {
+		enable = true;
+		# scripts = [ pkgs.mpvScripts.mpvacious ];
+		config = {
+			save-position-on-quit = true;
+			profile = "gpu-hq";
+			hwdec = "auto-safe";
+		};
+	};
 	
 	# keepassxc
 	# programs.keepassxc = {
