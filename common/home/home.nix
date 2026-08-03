@@ -16,7 +16,10 @@
 		localsend
 		syncplay
 		android-tools
+
 		yt-dlp
+		ffmpeg
+		losslesscut
 
 		fortune
 		cowsay
