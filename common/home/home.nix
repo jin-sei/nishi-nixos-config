@@ -16,6 +16,7 @@
 		localsend
 		syncplay
 		android-tools
+		yt-dlp
 
 		fortune
 		cowsay
