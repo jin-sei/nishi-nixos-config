@@ -9,7 +9,7 @@
 		syntaxHighlighting.enable = true;
 
 		shellAliases = {
-  			ll = "ls -l";
+  			ll = "ls -lh";
 			gt = "git status";
 			cow = "fortune | cowsay";
 			nvmpv = "nividia-offload mpv";
