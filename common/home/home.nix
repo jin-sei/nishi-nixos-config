@@ -19,7 +19,6 @@
 
 		yt-dlp
 		ffmpeg
-		losslesscut
 
 		fortune
 		cowsay
