@@ -19,6 +19,7 @@
 
 		yt-dlp
 		ffmpeg
+		mkvtoolnix
 
 		fortune
 		cowsay
