@@ -29,6 +29,7 @@
 			"https://drive.google.com"
 			"https://ent.utc.fr"
 			"https://duck.ai"
+			"https://web.whatsapp.com"
 		];
 		
 		profiles.default = {
