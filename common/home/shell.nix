@@ -12,7 +12,7 @@
   			ll = "ls -lh";
 			gt = "git status";
 			cow = "fortune | cowsay";
-			nvmpv = "nividia-offload mpv";
+			nvmpv = "nvidia-offload mpv";
   			# update = "sudo nixos-rebuild switch";
 		};
 		history.size = 10000;
