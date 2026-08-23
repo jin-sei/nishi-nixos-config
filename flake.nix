@@ -54,7 +54,10 @@
 		homeConfigurations = {
 			"jinsei@nishi-desktop" = home-manager.lib.homeManagerConfiguration {
 				inherit pkgs;
-				extraSpecialArgs = {inherit inputs;};
+				extraSpecialArgs = {
+					inherit inputs;
+					isLaptop = false;
+				};
 				modules = [
 					./common/home/home.nix
 					./common/home/shell.nix
