@@ -20,6 +20,7 @@
 		yt-dlp
 		ffmpeg
 		mkvtoolnix
+		imagemagick
 
 		fortune
 		cowsay
