@@ -31,6 +31,7 @@
 			papers	
 		zathura
 		keepassxc
+		ente-desktop
 
 		ungoogled-chromium
 		signal-desktop
