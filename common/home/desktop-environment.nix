@@ -101,7 +101,7 @@
 				
 				"hyprland/window" = {
 					tooltip = false;
-					format = "{initialTitle}";
+					format = "{title}";
 				};
 				
 				"hyprland/workspaces" = {
