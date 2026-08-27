@@ -38,11 +38,6 @@
 		deezer-desktop
 		filen-desktop
 		discord
-		
-		(anki.withAddons [
-    			ankiAddons.passfail2
-			ankiAddons.anki-connect
-  		])
 
 		proton-vpn
 		proton-pass

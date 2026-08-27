@@ -60,6 +60,7 @@
 				};
 				modules = [
 					./common/home/home.nix
+					./common/home/anki.nix
 					./common/home/shell.nix
 					./common/home/desktop-environment.nix
 					./common/home/apps.nix
@@ -76,6 +77,7 @@
 				};
 				modules = [
 					./common/home/home.nix
+					./common/home/anki.nix
 					./common/home/shell.nix
 					./common/home/desktop-environment.nix
 					./common/home/apps.nix
