@@ -13,23 +13,31 @@
 		enablePrivateDesktopEntry = true;
 		
 		policies.Cookies.Allow = [
-			"https://github.com"
-			"https://moodle.utc.fr"
-			"https://utc.fr"
 			"https://account.proton.me"
 			"https://pass.proton.me"
-			"https://app.todoist.com"
-			"https://mail.google.com"
 			"https://calendar.proton.me"
+
 			"https://google.com"
+			"https://mail.google.com"
+			"https://drive.google.com"
+
 			"https://letterboxd.com"
 			"https://serializd.com"
+
 			"https://duckduckgo.com"
-			"https://webmail.utc.fr"
-			"https://drive.google.com"
-			"https://ent.utc.fr"
 			"https://duck.ai"
+
+			"https://webmail.utc.fr"
+			"https://moodle.utc.fr"
+			"https://utc.fr"
+			"https://ent.utc.fr"
+
+			"https://app.slack.com"
+			"https://plask.slack.com"
+
+			"https://app.todoist.com"
 			"https://web.whatsapp.com"
+			"https://github.com"
 		];
 		
 		profiles.default = {
