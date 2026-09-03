@@ -80,8 +80,9 @@
 				"network.cookie.lifetimePolicy" = 2;
 				
 				"full-screen-api.ignore-widgets" = true;
+				"zen.theme.content-element-separation" = 0;
 
-				"browser.translations.enable" = false;
+				# "browser.translations.enable" = false;
 				"browser.translations.automaticallyPopup" = false;
 				"extensions.formautofill.addresses.enabled" = false;
 				"extensions.formautofill.creditCards.enabled" = false;
