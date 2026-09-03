@@ -10,7 +10,7 @@
 	# Enable networking
 	networking.networkmanager.enable = true;
 
-	# for localsend		
+	# for localsend	
 	networking.firewall.allowedTCPPorts = [ 53317 ];
 	networking.firewall.allowedUDPPorts = [ 53317 ];	
 	
@@ -94,14 +94,14 @@
 	environment.systemPackages = with pkgs; [
 		tree
 		git
+	     	vim
+		python3
 		
 		lshw # list hardware
 		wget
 	     	curl
 		zip
 		unzip
-
-	     	vim
 	];
 	
 	fonts.packages = with pkgs; [
