@@ -28,6 +28,15 @@ with nix helper (nh) command
 nh home switch -c jinsei@nishi-virtual # -c flag is optional
 ```
 
+## updating
+
+with nix helper (nh)
+
+```bash
+nh os switch -u # in case of crash on nh os switch, use nh os boot to add configuration in bootloader without switching
+nh home switch
+```
+
 ## useful commands
 
 garbage collections dry run (see how much space I can save)
@@ -39,7 +48,7 @@ nix-collect-garbage --dry-run
 list generations
 
 ```bash
-nixos-rebuild --list-generations
+nix profile history --profile /nix/var/nix/profiles/system
 ```
 
 bootstrap home-manager (new machine)
