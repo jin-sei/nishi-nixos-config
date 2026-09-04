@@ -7,6 +7,7 @@
 		enableCompletion = true;
 		autosuggestion.enable = true;
 		syntaxHighlighting.enable = true;
+		history.size = 10000;
 
 		shellAliases = {
   			ll = "ls -lh";
@@ -16,7 +17,16 @@
 			# vi = "nvim"; # already handled in neovim.nix by programs.neovim.viAlias = true;
   			# update = "sudo nixos-rebuild switch";
 		};
-		history.size = 10000;
+
+		# initContent = ''
+		# function custom-clear-screen() {
+		# 	zle clear-screen 
+      		# 	echo ""
+      		# 	zle reset-prompt
+		# }
+		# zle -N custom-clear-screen
+		# bindkey '^L' custom-clear-screen
+		# '';
 		
 		# plugin management with oh-my-zsh
 		oh-my-zsh = {
