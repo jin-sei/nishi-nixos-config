@@ -22,6 +22,12 @@ using home-manager
 home-manager switch --flake .#jinsei@nishi-virtual
 ```
 
+from a distant repo (--refresh flag in case the repo is cached and updates won't be fetched)
+
+```bash
+home-manager switch --flake github:jin-sei/nishi-nixos-config#nils@vpi --refresh
+```
+
 with nix helper (nh) command
 
 ```bash
@@ -60,7 +66,7 @@ nix run github:nix-community/home-manager -- switch --flake .#jinsei
 bootstrap home-manager (new machine, no git clone)
 
 ```bash
-nix run github:nix-community/home-manager -- switch --flake github:your-github-user/your-repo#your-username
+nix run github:nix-community/home-manager -- switch --flake github:jin-sei/nishi-nixos-config#nils@vpi
 ```
 
 run with nvidia gpu 
