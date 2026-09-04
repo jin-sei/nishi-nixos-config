@@ -13,6 +13,7 @@
 			gt = "git status";
 			cow = "fortune | cowsay";
 			nvmpv = "nvidia-offload mpv";
+			vi = "nvim";
   			# update = "sudo nixos-rebuild switch";
 		};
 		history.size = 10000;
