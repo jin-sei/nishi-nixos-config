@@ -70,7 +70,7 @@
 					isLaptop = false;
 				};
 				modules = [
-					./common/home/home.nix
+					./common/home/home-manager.nix
 					./common/home/anki.nix
 					./common/home/shell.nix
 					./common/home/neovim.nix
@@ -89,7 +89,7 @@
 					isLaptop = true;
 				};
 				modules = [
-					./common/home/home.nix
+					./common/home/home-manager.nix
 					./common/home/anki.nix
 					./common/home/shell.nix
 					./common/home/neovim.nix

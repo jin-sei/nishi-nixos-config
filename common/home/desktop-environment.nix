@@ -18,7 +18,24 @@
 			WantedBy = [ "graphical-session.target" ];
 		};
 	};
-	
+
+	# alacritty
+	programs.alacritty = {
+		enable = true;
+		settings = {
+			general = {
+				import = [ (inputs.self + "/miscellaneous/themes/alacritty/iv-spade.toml") ];
+				working_directory = "None";
+			};
+			window = {
+				padding = {
+					x = 7;
+					y = 7;
+				};
+			};
+		};
+	};
+
 	# rofi
 	programs.rofi = {
 		enable = true;

@@ -1,6 +1,59 @@
 { config, pkgs, inputs, ... }:
 
 {
+	# packages
+	home.packages = with pkgs; [
+		hyprpolkitagent
+		hyprlock
+		hyprpaper
+		swaynotificationcenter
+
+		hyprpicker
+		hyprshot
+		wl-clipboard
+		gdu
+		wiremix
+		localsend
+		syncplay
+		android-tools
+
+		yt-dlp
+		ffmpeg
+		mkvtoolnix
+		imagemagick
+
+		fortune
+		cowsay
+		
+		nautilus
+			ffmpegthumbnailer
+			papers	
+		zathura
+		keepassxc
+		ente-desktop
+
+		ungoogled-chromium
+		signal-desktop
+		deezer-desktop
+		filen-desktop
+		discord
+
+		proton-vpn
+		proton-pass
+		qbittorrent
+  	];
+
+	# enable autostarts 
+	xdg.autostart.enable = true;
+
+	# nix helper (nh)
+	programs.nh = {
+		enable = true;
+		clean.enable = true;
+		clean.extraArgs = "--keep-since 7d --keep 10";
+		flake = "${config.home.homeDirectory}/nishi-nixos-config"; # sets NH_OS_FLAKE variable for you
+	};
+
 	# git
 	programs.git = {
 		enable = true;
@@ -11,23 +64,6 @@
 			};
 			init.defaultBranch = "main";
 			core.editor = "vim";
-		};
-	};
-
-	# alacritty
-	programs.alacritty = {
-		enable = true;
-		settings = {
-			general = {
-				import = [ (inputs.self + "/miscellaneous/themes/alacritty/iv-spade.toml") ];
-				working_directory = "None";
-			};
-			window = {
-				padding = {
-					x = 10;
-					y = 10;
-				};
-			};
 		};
 	};
 
