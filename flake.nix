@@ -100,6 +100,18 @@
 					# ./modules/home/heroic.nix
 				];
 			};
+			"${work_user_01}@vpi" = home-manager.lib.homeManagerConfiguration {
+				inherit pkgs;
+				extraSpecialArgs = {
+					inherit inputs;
+					user = work_user_01; 
+				};
+				modules = [
+					./common/home/home-manager.nix
+					./common/home/shell.nix
+					./common/home/neovim.nix
+				];
+			};
 		};
 	};
 }
