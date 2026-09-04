@@ -57,6 +57,12 @@ bootstrap home-manager (new machine)
 nix run github:nix-community/home-manager -- switch --flake .#jinsei
 ```
 
+bootstrap home-manager (new machine, no git clone)
+
+```bash
+nix run github:nix-community/home-manager -- switch --flake github:your-github-user/your-repo#your-username
+```
+
 run with nvidia gpu 
 
 ```bash
