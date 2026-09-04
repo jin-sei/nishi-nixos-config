@@ -14,6 +14,7 @@
 			gt = "git status";
 			cow = "fortune | cowsay";
 			nvmpv = "nvidia-offload mpv";
+			nv = "nvim -M"; # open read-only neovim
 			# vi = "nvim"; # already handled in neovim.nix by programs.neovim.viAlias = true;
   			# update = "sudo nixos-rebuild switch";
 		};
