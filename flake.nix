@@ -21,12 +21,19 @@
 	let
 		system = "x86_64-linux";
 		pkgs = nixpkgs.legacyPackages.${system};
+
+		# MY USERNAMES
+		personal_user_01 = "jinsei";
+		work_user_01	 = "nils";
 	in
 	{
 		nixosConfigurations = {
 			# DESKTOP	
 			nishi-desktop = nixpkgs.lib.nixosSystem {
-				specialArgs = {inherit inputs;};
+				specialArgs = {
+					inherit inputs; 
+					user = personal_user_01;
+				};
 				modules = [
 					./common/system/base.nix
 					./common/system/nvidia.nix
@@ -38,7 +45,10 @@
 			};
 			# LAPTOP
 			nishi-laptop = nixpkgs.lib.nixosSystem {
-				specialArgs = {inherit inputs;};
+				specialArgs = {
+					inherit inputs;
+					user = personal_user_01;
+				};
 				modules = [
 					./common/system/base.nix
 					./common/system/nvidia.nix
@@ -52,10 +62,11 @@
 		};
 		
 		homeConfigurations = {
-			"jinsei@nishi-desktop" = home-manager.lib.homeManagerConfiguration {
+			"${personal_user_01}@nishi-desktop" = home-manager.lib.homeManagerConfiguration {
 				inherit pkgs;
 				extraSpecialArgs = {
 					inherit inputs;
+					user = personal_user_01;
 					isLaptop = false;
 				};
 				modules = [
@@ -70,10 +81,11 @@
 					./modules/home/heroic.nix
 				];
 			};
-			"jinsei@nishi-laptop" = home-manager.lib.homeManagerConfiguration {
+			"${personal_user_01}@nishi-laptop" = home-manager.lib.homeManagerConfiguration {
 				inherit pkgs;
 				extraSpecialArgs = {
 					inherit inputs;
+					user = personal_user_01; 
 					isLaptop = true;
 				};
 				modules = [

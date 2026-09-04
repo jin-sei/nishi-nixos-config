@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, user, ... }:
 
 {
 	# packages
@@ -48,7 +48,7 @@
 		enable = true;
 		clean.enable = true;
 		clean.extraArgs = "--keep-since 7d --keep 10";
-		flake = "/home/jinsei/nishi-nixos-config"; # sets NH_OS_FLAKE variable for you
+		flake = "${config.home.homeDirectory}/nishi-nixos-config"; # sets NH_OS_FLAKE variable for you
 	};	
 	
 	# home manager (self-management)
@@ -57,12 +57,11 @@
 	# enable autostarts 
 	xdg.autostart.enable = true;
 	
-	
 	# allow unfree packages
 	nixpkgs.config.allowUnfree = true;
 
 	# other home manager infos
-	home.username = "jinsei";
-	home.homeDirectory = "/home/jinsei";
+	home.username = user;
+	home.homeDirectory = "/home/${user}";
 	home.stateVersion = "26.05";
 }

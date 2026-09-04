@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, ... }:
+{ config, pkgs, inputs, user, ... }:
 
 {
 	# networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -75,9 +75,9 @@
 	};
 	
 	# Define a user account. Don't forget to set a password with ‘passwd’.
-	users.users."jinsei" = {
+	users.users."${user}" = {
 		isNormalUser = true;
-		description = "jinsei";
+		description = "${user}";
 		useDefaultShell = true;
 		extraGroups = [ "networkmanager" "audio" "wheel" ];
 		# packages = with pkgs; [];

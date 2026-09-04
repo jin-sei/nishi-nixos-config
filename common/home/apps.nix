@@ -17,9 +17,17 @@
 	# alacritty
 	programs.alacritty = {
 		enable = true;
-		settings.general = {
-			import = [ (inputs.self + "/miscellaneous/themes/alacritty/iv-spade.toml") ];
-			working_directory = "None";
+		settings = {
+			general = {
+				import = [ (inputs.self + "/miscellaneous/themes/alacritty/iv-spade.toml") ];
+				working_directory = "None";
+			};
+			window = {
+				padding = {
+					x = 10;
+					y = 10;
+				};
+			};
 		};
 	};
 
@@ -41,7 +49,7 @@
 	programs.obsidian = {
 		enable = true;
 		vaults."jinsei-obsidian" = {
-			target = "/home/jinsei/Vault/jinsei-obsidian";
+			target = "${config.home.homeDirectory}/Vault/jinsei-obsidian";
 			settings.appearance = {
 				accentColor = "#e3e3e3";
 				textFontFamily = "";

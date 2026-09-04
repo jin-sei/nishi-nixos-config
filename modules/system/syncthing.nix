@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, user, ... }:
 let
 	all_hosts = [ "nishi-desktop" "nishi-laptop" ];
 in
@@ -6,13 +6,13 @@ in
 	services.syncthing = {
 		enable = true;
 		openDefaultPorts = true;
-		user = "jinsei";
+		user = user;
 		group = "users";
-		dataDir = "/home/jinsei";
-		configDir = "/home/jinsei/.config/syncthing";
+		dataDir = "/home/${user}";
+		configDir = "/home/${user}/.config/syncthing";
 		settings = {
 			gui = {
-				user = "jinsei";
+				user = user;
 				theme = "black";
 			};
 			devices = {
@@ -22,27 +22,27 @@ in
 			};
 			folders = {
 				"Documents" = {
-					path = "/home/jinsei/Documents";
+					path = "/home/${user}/Documents";
 					devices = all_hosts;
 			  	};
 				"Pictures" = {
-					path = "/home/jinsei/Pictures";
+					path = "/home/${user}/Pictures";
 					devices = all_hosts;
 				};
 				"Music" = {
-					path = "/home/jinsei/Music";
+					path = "/home/${user}/Music";
 					devices = all_hosts;
 				};
 				"Vault" = {
-					path = "/home/jinsei/Vault";
+					path = "/home/${user}/Vault";
 					devices =all_hosts ++ [ "graphene-phone" ];
 				};
 				"Code" = {
-					path = "/home/jinsei/Code";
+					path = "/home/${user}/Code";
 					devices =all_hosts;
 				};
 				"Desktop" = {
-					path = "/home/jinsei/Desktop";
+					path = "/home/${user}/Desktop";
 					devices =all_hosts;
 				};
 
