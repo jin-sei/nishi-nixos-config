@@ -62,6 +62,7 @@
 					./common/home/home.nix
 					./common/home/anki.nix
 					./common/home/shell.nix
+					./common/home/neovim.nix
 					./common/home/desktop-environment.nix
 					./common/home/apps.nix
 					./modules/home/zen-browser.nix
@@ -79,6 +80,7 @@
 					./common/home/home.nix
 					./common/home/anki.nix
 					./common/home/shell.nix
+					./common/home/neovim.nix
 					./common/home/desktop-environment.nix
 					./common/home/apps.nix
 					./modules/home/zen-browser.nix

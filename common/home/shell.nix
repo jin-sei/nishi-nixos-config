@@ -13,7 +13,7 @@
 			gt = "git status";
 			cow = "fortune | cowsay";
 			nvmpv = "nvidia-offload mpv";
-			vi = "nvim";
+			# vi = "nvim"; # already handled in neovim.nix by programs.neovim.viAlias = true;
   			# update = "sudo nixos-rebuild switch";
 		};
 		history.size = 10000;

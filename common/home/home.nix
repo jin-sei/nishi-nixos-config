@@ -25,7 +25,6 @@
 		fortune
 		cowsay
 		
-		neovim
 		nautilus
 			ffmpegthumbnailer
 			papers	
