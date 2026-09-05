@@ -2,29 +2,38 @@
 	description = "Nishi: NixOS config";
 	
 	inputs = {
-		nixpkgs_unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+		nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 		nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
 		home-manager = {
 			url = "github:nix-community/home-manager/release-26.05";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
+		home-manager-unstable = {
+			url = "github:nix-community/home-manager/master";
+			inputs.nixpkgs.follows = "nixpkgs-unstable";
+		};
   		zen-browser = {
     			url = "github:0xc000022070/zen-browser-flake";
     			inputs = {
-      				nixpkgs.follows = "nixpkgs_unstable";
-      				home-manager.follows = "home-manager";
+      				nixpkgs.follows = "nixpkgs-unstable";
+      				home-manager.follows = "home-manager-unstable";
     			};
   		};
+		areofyl-fetch = {
+			url = "github:areofyl/fetch";
+			inputs.nixpkgs.follows = "nixpkgs-unstable";
+		};
 	};
 	
-	outputs = {self, nixpkgs, nixpkgs_unstable, home-manager, ...}@inputs: 
+	outputs = {self, nixpkgs, nixpkgs-unstable, home-manager, home-manager-unstable, ...}@inputs: 
 	let
 		system = "x86_64-linux";
 		pkgs = nixpkgs.legacyPackages.${system};
+		pkgs-unstable = nixpkgs-unstable.legacyPackages.${system};
 
 		# MY USERNAMES
-		personal_user_01 = "jinsei";
-		work_user_01	 = "nils";
+		personal-user-01 = "jinsei";
+		work-user-01	 = "nils";
 	in
 	{
 		nixosConfigurations = {
@@ -32,7 +41,7 @@
 			nishi-desktop = nixpkgs.lib.nixosSystem {
 				specialArgs = {
 					inherit inputs; 
-					user = personal_user_01;
+					user = personal-user-01;
 				};
 				modules = [
 					./common/system/base.nix
@@ -47,7 +56,7 @@
 			nishi-laptop = nixpkgs.lib.nixosSystem {
 				specialArgs = {
 					inherit inputs;
-					user = personal_user_01;
+					user = personal-user-01;
 				};
 				modules = [
 					./common/system/base.nix
@@ -62,11 +71,12 @@
 		};
 		
 		homeConfigurations = {
-			"${personal_user_01}@nishi-desktop" = home-manager.lib.homeManagerConfiguration {
+			"${personal-user-01}@nishi-desktop" = home-manager.lib.homeManagerConfiguration {
 				inherit pkgs;
 				extraSpecialArgs = {
+					inherit pkgs-unstable;
 					inherit inputs;
-					user = personal_user_01;
+					user = personal-user-01;
 					isLaptop = false;
 				};
 				modules = [
@@ -81,11 +91,12 @@
 					./modules/home/heroic.nix
 				];
 			};
-			"${personal_user_01}@nishi-laptop" = home-manager.lib.homeManagerConfiguration {
+			"${personal-user-01}@nishi-laptop" = home-manager.lib.homeManagerConfiguration {
 				inherit pkgs;
 				extraSpecialArgs = {
+					inherit pkgs-unstable;
 					inherit inputs;
-					user = personal_user_01; 
+					user = personal-user-01; 
 					isLaptop = true;
 				};
 				modules = [
@@ -100,11 +111,12 @@
 					# ./modules/home/heroic.nix
 				];
 			};
-			"${work_user_01}@vpi" = home-manager.lib.homeManagerConfiguration {
+			"${work-user-01}@vpi" = home-manager.lib.homeManagerConfiguration {
 				inherit pkgs;
 				extraSpecialArgs = {
+					inherit pkgs-unstable;
 					inherit inputs;
-					user = work_user_01; 
+					user = work-user-01; 
 				};
 				modules = [
 					./common/home/home-manager.nix

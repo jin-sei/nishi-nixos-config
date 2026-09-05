@@ -1,8 +1,8 @@
-{ config, pkgs, inputs, ... }:
+{ config, pkgs, pkgs-unstable, inputs, ... }:
 
 {
-	# packages
-	home.packages = with pkgs; [
+	# packages (stable)
+	home.packages = (with pkgs; [
 		hyprpolkitagent
 		hyprlock
 		hyprpaper
@@ -24,6 +24,7 @@
 
 		fortune
 		cowsay
+		cmatrix
 		
 		nautilus
 			ffmpegthumbnailer
@@ -41,7 +42,17 @@
 		proton-vpn
 		proton-pass
 		qbittorrent
-  	];
+
+	# packages (unstable)
+  	]) ++ (with pkgs-unstable; [
+		# some unstable package
+	]);
+
+	imports = [
+		# importing some extra/unstable modules options
+		# inputs.home-manager-unstable.modules.programs.something.nix
+		inputs.areofyl-fetch.homeManagerModules.default
+	];
 
 	# enable autostarts 
 	xdg.autostart.enable = true;
@@ -51,7 +62,67 @@
 		enable = true;
 		clean.enable = true;
 		clean.extraArgs = "--keep-since 7d --keep 10";
-		flake = "${config.home.homeDirectory}/nishi-nixos-config"; # sets NH_OS_FLAKE variable for you
+		flake = "${config.home.homeDirectory}/nishi-nixos-config"; # sets NH_OS_FLAKE variable
+	};
+
+	# fastfetch
+	programs.fastfetch = {
+		enable = true;
+		settings = {
+			logo = {
+				source = "OSX";
+				padding = {right=5;left=3;};
+			};
+			display = {
+				color = "blue";
+				separator = ": ";
+				key = {width=14;};
+			};
+			modules = [
+				"title"
+       				{
+					type = "separator";
+					string = "─";
+				}
+       				"os"
+       				"kernel"
+       				"packages"
+       				"shell"
+       				"wm"
+       				"host"
+       				"cpu"
+       				"gpu"
+       				"memory"
+       				"disk"
+       				"terminal"
+       				"break"
+       				"colors"	
+			];
+		};
+	};
+	
+	# fetch
+	programs.fetch = {
+		enable = true;
+		labelColor = "blue";
+		separator = "─";
+		info = [
+			"os"
+			"kernel"
+			"packages"
+			"shell"
+			"wm"
+			"host"
+			"cpu"
+			"gpu"
+			"memory"
+			"disk"
+			"terminal"
+			"colors"
+		];
+		size = 1.0;
+		speed = 1.0;
+    		spin = "y";
 	};
 
 	# git

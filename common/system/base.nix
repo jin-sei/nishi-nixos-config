@@ -107,6 +107,7 @@
 	fonts.packages = with pkgs; [
 		nerd-fonts.fira-code
 		nerd-fonts.symbols-only
+		noto-fonts-cjk-sans
 	];
 
 	# enable zsh system-wide to source necessary files
