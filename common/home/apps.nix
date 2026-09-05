@@ -38,6 +38,7 @@
 		deezer-desktop
 		filen-desktop
 		discord
+		anki
 
 		proton-vpn
 		proton-pass

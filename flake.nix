@@ -81,7 +81,7 @@
 				};
 				modules = [
 					./common/home/home-manager.nix
-					./common/home/anki.nix
+					#./common/home/anki.nix
 					./common/home/shell.nix
 					./common/home/neovim.nix
 					./common/home/desktop-environment.nix
@@ -101,7 +101,7 @@
 				};
 				modules = [
 					./common/home/home-manager.nix
-					./common/home/anki.nix
+					#./common/home/anki.nix
 					./common/home/shell.nix
 					./common/home/neovim.nix
 					./common/home/desktop-environment.nix
