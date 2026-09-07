@@ -45,7 +45,7 @@
 		enableZshIntegration = true;
 		settings = {
 
-			format = "╭─$username$hostname$directory$git_branch$git_status$line_break╰─$character";
+			format = "╭─$username$hostname$nix_shell$directory$git_branch$git_status$line_break╰─$character";
 			add_newline = true;
 
 			character = {
@@ -60,11 +60,18 @@
 			
 			hostname = {
 				ssh_only = false;
-				format = "@[$hostname](bold purple) "; 
+				format = "@[$hostname](bold purple)"; 
+			};
+
+			nix_shell = {
+				format = ":[$name]($style)";
+				style = "bold blue";
+				heuristic = false;
+				unknown_msg = "shell";
 			};
 			
 			directory = {
-				format = "[$path](bold cyan)";
+				format = " [$path](bold cyan)";
 				truncation_length = 1;
       				truncation_symbol = "";
       				truncate_to_repo = false;
