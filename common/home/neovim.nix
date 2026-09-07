@@ -2,9 +2,9 @@
 
 {
 	# neovim lua config files
-	xdg.configFile."nvim" = {
-		source = inputs.self + "/miscellaneous/dotfiles/neovim";
-	 	target = "nvim";
+	xdg.configFile."nvim/lua" = {
+		source = inputs.self + "/miscellaneous/dotfiles/neovim/lua";
+	 	target = "nvim/lua";
 		recursive = true;
 	};
 
@@ -13,11 +13,16 @@
 		enable = true;
 		defaultEditor = true;
 		viAlias = true;
-		# plugins = with pkgs.vimPlugins; [
-		# 	nvim-lspconfig
-		# 	nvim-treesitter.withAllGrammars
-		# 	gruvbox-material
-		# 	mini-nvim
-    		# ];
+
+		# replaces init.lua
+		initLua = ''
+			require("colors")
+			require("settings")
+			require("treesitter")
+		'';
+
+		plugins = with pkgs.vimPlugins; [
+			nvim-treesitter.withAllGrammars
+    		];
 	};
 }
