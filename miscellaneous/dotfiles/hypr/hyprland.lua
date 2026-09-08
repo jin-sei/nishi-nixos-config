@@ -128,7 +128,7 @@ hl.window_rule({
 		class = "Alacritty"
 	},
 	center = true,
-	size = {800, 500};
+	size = {790, 440};
 })
 
 hl.window_rule({
