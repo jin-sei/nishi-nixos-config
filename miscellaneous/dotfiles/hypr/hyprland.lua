@@ -41,6 +41,10 @@ hl.env("GBM_BACKEND", "nvidia-drm")
 hl.env("__GLX_VENDOR_LIBRARY_NAME", "nvidia")
 hl.env("LIBVA_DRIVER_NAME", "nvidia")
 
+-- keyboard modifier
+hl.env("XMODIFIERS", "@im=fcitx")
+hl.env("QT_IM_MODULE", "fcitx")
+
 ----------------
 ----  MISC  ----
 ----------------
@@ -147,7 +151,7 @@ hl.window_rule({
 
 hl.config({
 	input = {
-		kb_layout  = "fr",
+		kb_layout  = "fr,us",
 		kb_variant = "",
 		kb_model   = "",
 		kb_options = "",

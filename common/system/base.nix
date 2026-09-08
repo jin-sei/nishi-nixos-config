@@ -60,14 +60,29 @@
 				fcitx5-gtk
 			];
 			settings.inputMethod = {
-				GroupOrder."0" = "Default";
+				
+				GroupOrder = {
+					"0" = "AZERTY_Profile";
+					# "1" = "QWERTY_Profile";
+				};
+
+				# AZERTY + mozc
 				"Groups/0" = {
-					Name = "Default";
+					Name = "AZERTY_Profile";
 					"Default Layout" = "fr";
-					DefaultIM = "mozc";
+					DefaultIM = "keyboard-fr";
 				};
 				"Groups/0/Items/0".Name = "keyboard-fr";
 				"Groups/0/Items/1".Name = "mozc";
+
+				# QWERTY + mozc
+				# "Groups/1" = {
+				# 	Name = "QWERTY_Profile";
+				# 	"Default Layout" = "us";
+				# 	DefaultIM = "keyboard-us";
+				# };
+				# "Groups/1/Items/0".Name = "keyboard-us";
+				# "Groups/1/Items/1".Name = "mozc";
 			};
 			ignoreUserConfig = true;
 			waylandFrontend = true;
