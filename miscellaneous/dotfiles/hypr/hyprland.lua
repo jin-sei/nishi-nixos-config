@@ -113,6 +113,9 @@ hl.bind(mainMod .. " + Tab", hl.dsp.focus({ workspace = "previous" }))
 hl.bind(mainMod .. " + S", hl.dsp.workspace.toggle_special("magic"))
 hl.bind(mainMod .. " + " .. altMod .. " + S", hl.dsp.window.move({ workspace = "special:magic" }))
 
+-- cycling between keyboard layouts (us, fr)
+hl.bind("CTRL + SHIFT + Space", hl.dsp.exec_cmd("hyprctl switchxkblayout all next"))
+
 --------------------------------
 ---- WINDOWS AND WORKSPACES ----
 --------------------------------
