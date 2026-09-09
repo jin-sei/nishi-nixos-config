@@ -26,6 +26,7 @@
 		fortune
 		cowsay
 		cmatrix
+		tt
 		
 		nautilus
 			ffmpegthumbnailer

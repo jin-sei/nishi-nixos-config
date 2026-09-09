@@ -17,6 +17,7 @@
 			nv = "nvim -M"; # open read-only neovim
 			ff = "fastfetch";
 			matrix = "cmatrix -b -C green -u 10";
+			tt = "tt -notheme";
 			wc = "wl-copy";
 			# vi = "nvim"; # already handled in neovim.nix by programs.neovim.viAlias = true;
   			# update = "sudo nixos-rebuild switch";
