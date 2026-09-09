@@ -17,6 +17,7 @@
 		syncplay
 		android-tools
 
+		tree
 		yt-dlp
 		ffmpeg
 		mkvtoolnix

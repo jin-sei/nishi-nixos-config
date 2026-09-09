@@ -22,16 +22,6 @@
   			# update = "sudo nixos-rebuild switch";
 		};
 
-		# initContent = ''
-		# function custom-clear-screen() {
-		# 	zle clear-screen 
-      		# 	echo ""
-      		# 	zle reset-prompt
-		# }
-		# zle -N custom-clear-screen
-		# bindkey '^L' custom-clear-screen
-		# '';
-		
 		# plugin management with oh-my-zsh
 		oh-my-zsh = {
     			enable = true;
