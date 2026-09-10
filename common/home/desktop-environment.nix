@@ -195,7 +195,7 @@ in
 					format-disconnected = "<span color='${waybarEtiquetteColor}'>オフライン</span>";
 					format-alt = "<span color='${waybarEtiquetteColor}'>接続:</span>{ipaddr}";
 					tooltip = false;
-					on-click-right = "alacritty -e nmtui";
+					on-click-right = "alacritty --class WaybarSpawned -e nmtui";
 				};
 				
 				pulseaudio = {
@@ -203,7 +203,7 @@ in
 					format-bluetooth = "<span color='${waybarEtiquetteColor}'>無線:</span>{volume}%";
 					tooltip = false;
 					on-click = "wpctl set-mute @DEFAULT_SINK@ toggle";
-					on-click-right = "alacritty -e wiremix";
+					on-click-right = "alacritty --class WaybarSpawned -e wiremix";
 				};
 			};
 		};

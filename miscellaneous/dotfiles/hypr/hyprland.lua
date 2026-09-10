@@ -148,6 +148,16 @@ hl.window_rule({
 	size = {450, 700};
 })
 
+hl.window_rule({
+	name = "floating-waybar-spawns",
+	match = {
+		class = "WaybarSpawned"
+	},
+	float = true;
+	center = true,
+	size = {800, 500};
+})
+
 ---------------
 ---- INPUT ----
 ---------------
