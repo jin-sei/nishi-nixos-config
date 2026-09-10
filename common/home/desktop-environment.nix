@@ -1,5 +1,7 @@
 { config, lib, pkgs, inputs, isLaptop ? false, ... }:
-
+let
+	waybarEtiquetteColor = "#5A5555";
+in
 {
 	# services: hyprpolkitagent
 	systemd.user.services.hyprpolkitagent = {
@@ -152,9 +154,9 @@
 				};
 				
 				clock = {
-					on-click-right = "swaync-client -t";
-					format = "{:%H時%M分}";
-					format-alt = "{:%d日%m月%Y年}";
+					on-click = "swaync-client -t";
+					format ="{0:%d}<span color='${waybarEtiquetteColor}'>日</span>{0:%m}<span color='${waybarEtiquetteColor}'>月</span>{0:%Y}<span color='${waybarEtiquetteColor}'>年</span> {0:%H}<span color='${waybarEtiquetteColor}'>時</span>{0:%M}<span color='${waybarEtiquetteColor}'>分</span>";# "{:%d日%m月%Y年 %H時%M分}";
+					# format-alt = "{:%d日%m月%Y年}";
 					tooltip = false;
 					tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
 					calendar = {
@@ -165,7 +167,7 @@
 				};
 			
 				backlight = {
-					format = "輝度:{percent}%";
+					format = "<span color='${waybarEtiquetteColor}'>輝度:</span>{percent}%";
 					tooltip = false;
 				};
 				
@@ -175,10 +177,10 @@
 						critical = 15;
 					};
 					tooltip = false;
-					format = "電池:{capacity}%";
-					format-full = "電池:{capacity}%";
-					format-charging = "電池(充電):{capacity}%";
-					format-plugged = "電池(有線):{capacity}%";
+					format = "<span color='${waybarEtiquetteColor}'>電池:</span>{capacity}%";
+					format-full = "<span color='${waybarEtiquetteColor}'>電池:</span>{capacity}%";
+					format-charging = "<span color='${waybarEtiquetteColor}'>充電:</span>{capacity}%";
+					format-plugged = "<span color='${waybarEtiquetteColor}'>有線:</span>{capacity}%";
 				};
 				
 				"battery#bat2" = {
@@ -186,18 +188,19 @@
 				};
 				
 				network = {
-					format-wifi = "無線:{essid}";
-					format-ethernet = "イーサネット:{ipaddr}/{cidr}";
-					format-linked = "リンク";
-					format-disabled = "ブロック";
-					format-disconnected = "オフライン";
-					format-alt = "無線:{ipaddr}";
+					format-wifi = "<span color='${waybarEtiquetteColor}'>接続:</span>{essid}";
+					format-ethernet = "<span color='${waybarEtiquetteColor}'>イーサネット:</span>{ipaddr}/{cidr}";
+					format-linked = "<span color='${waybarEtiquetteColor}'>リンク</span>";
+					format-disabled = "<span color='${waybarEtiquetteColor}'>ブロック</span>";
+					format-disconnected = "<span color='${waybarEtiquetteColor}'>オフライン</span>";
+					format-alt = "<span color='${waybarEtiquetteColor}'>接続:</span>{ipaddr}";
 					tooltip = false;
 					on-click-right = "alacritty -e nmtui";
 				};
 				
 				pulseaudio = {
-					format = "音量:{volume}%";
+					format = "<span color='${waybarEtiquetteColor}'>音量:</span>{volume}%";
+					format-bluetooth = "<span color='${waybarEtiquetteColor}'>無線:</span>{volume}%";
 					tooltip = false;
 					on-click = "wpctl set-mute @DEFAULT_SINK@ toggle";
 					on-click-right = "alacritty -e wiremix";
