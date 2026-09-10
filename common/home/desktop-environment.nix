@@ -186,12 +186,12 @@
 				};
 				
 				network = {
-					format-wifi = "ワイファイ:{ipaddr}/{cidr}";
+					format-wifi = "無線:{essid}";
 					format-ethernet = "イーサネット:{ipaddr}/{cidr}";
 					format-linked = "リンク";
 					format-disabled = "ブロック";
 					format-disconnected = "オフライン";
-					format-alt = "{ifname}:{ipaddr}/{cidr}";
+					format-alt = "無線:{ipaddr}";
 					tooltip = false;
 					on-click-right = "alacritty -e nmtui";
 				};

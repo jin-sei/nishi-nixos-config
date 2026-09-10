@@ -122,6 +122,7 @@
 		nerd-fonts.fira-code
 		nerd-fonts.symbols-only
 		noto-fonts-cjk-sans
+		mplus-outline-fonts.githubRelease
 	];
 
 	# enable zsh system-wide to source necessary files
