@@ -1,20 +1,15 @@
 * {
-    /* `otf-font-awesome` is required to be installed for icons */
     font-family: "FiraCode Nerd Font", Arial, sans-serif;
     font-size: 14px;
 }
 
 window#waybar {
-    /*
-    background-color: rgba(43, 48, 59, 0.5);
-    border-bottom: 3px solid rgba(100, 114, 125, 0.5);
-    */
-    /*background-color: rgba(30, 30, 46, 1);*/
-    background-color: #0C0C0C;
-    border-bottom: 3px solid rgba(12, 12, 12, 1);
+    background-color: #000000;
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
+    border: 1px solid rgb(59, 59, 59);
+    border-radius: 7px;
 }
 
 window#waybar.hidden {
@@ -38,23 +33,8 @@ button {
     border-radius: 0;
 }
 
-/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
-/*
-button:hover {
-    background: inherit;
-    box-shadow: inset 0 -3px #ffffff;
-}
-*/
-
-/* you can set a style on hover for any module like this */
-/*
-#pulseaudio:hover {
-    background-color: #a37800;
-}
-*/
-
 #workspaces {
-    background-color: #0C0C0C;
+    background-color: transparent;
 }
 
 #workspaces button {
@@ -65,32 +45,16 @@ button:hover {
 
 
 #workspaces button.active {
-    color: #f38ba8 ; /* background: #f38ba8;
-    color: #0C0C0C; */
+    color: #f38ba8 ;
 }
-
-/*
-#workspaces button.active:hover {
-    background: #f38ba8;
-    color: #0C0C0C;
-}
-*/
 
 #workspaces button:hover {
     color: #f38ba8;
 }
 
-/*
-#workspaces button.focused {
-    background-color: #ffffff;
-    box-shadow: inset 0 -3px #ffffff;
-}
-*/
-
 #workspaces button.urgent {
-    /* background-color: #eb4d4b;*/
 	background-color: #f38ba8;
-	color: #0C0C0C;
+	color: #000000;
 }
 
 #mode {
@@ -135,20 +99,18 @@ button:hover {
 }
 
 #clock {
-    background-color: #0C0C0C;
-    color: #ffffff;/*#b4befe;  rainbow 1 */
+    background-color: transparent;
+    color: #ffffff;
 }
 
-#battery { /* rainbow 2 */
-    background-color: #0C0C0C;
-    /* color: #74c7ec; */
+#battery {
+    background-color: transparent;
     color: #ffffff;
 }
 
 #battery.charging, #battery.plugged {
-    /* color: #74c7ec; */
     color: #ffffff;
-    background-color: #0C0C0C;
+    background-color: transparent;
 }
 
 @keyframes blink {
@@ -158,24 +120,11 @@ button:hover {
     }
 }
 
-/* Using steps() instead of linear as a timing function to limit cpu usage */
-/*
-#battery.critical:not(.charging) {
-    background-color: #0C0C0C;
-    color: #f38ba8;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: steps(12);
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-    */
-
 #battery.critical:not(.charging) {
     color: #f38ba8;
 }
 
-#power-profiles-daemon { /* rainbow 6 */
+#power-profiles-daemon { 
     padding-right: 15px;
 }
 
@@ -184,24 +133,22 @@ button:hover {
 }
 
 #power-profiles-daemon.performance {
-    background-color: #0C0C0C;
+    background-color: transparent;
     color: #f38ba8;
 }
 
 #power-profiles-daemon.balanced {
-    background-color: #0C0C0C;
-    /*color: #ffffff;*/
+    background-color: transparent;
     color: #f38ba8;
 }
 
 #power-profiles-daemon.power-saver {
-    background-color: #0C0C0C;
-    /*color: #ffffff;*/
+    background-color: transparent;
     color: #f38ba8;
 }
 
 label:focus {
-    background-color: #0C0C0C;
+    background-color: transparent;
 }
 
 #cpu {
@@ -217,30 +164,28 @@ label:focus {
     background-color: #964B00;
 }
 
-#backlight { /* rainbow 3 */
-    background-color: #0C0C0C;
-    color: #ffffff;/*#94e2d5; */
+#backlight {
+    background-color: transparent;
+    color: #ffffff;
 }
 
-#network { /* rainbow 5 */
-    background-color: #0C0C0C;
-    /*color: #fab387;*/
+#network {
+    background-color: transparent;
     color: #ffffff;
 }
 
 #network.disconnected {
-    background-color: #0C0C0C;
+    background-color: transparent;
     color: #f38ba8;
 }
 
-#pulseaudio { /* rainbow 4 */
-    background-color: #0C0C0C;
-    /* color: #f9e2af; */
+#pulseaudio { 
+    background-color: transparent;
     color: #ffffff;
 }
 
 #pulseaudio.muted {
-    background-color: #0C0C0C;
+    background-color: transparent;
     color: #f38ba8;
 }
 
@@ -254,7 +199,7 @@ label:focus {
 }
 
 #custom-media {
-    background-color: #0C0C0C;
+    background-color: transparent;
     color: #ffffff;
     min-width: 100px;
 }
@@ -276,7 +221,7 @@ label:focus {
 }
 
 #tray {
-    background-color: #0C0C0C;
+    background-color: transparent;
 }
 
 #tray > .passive {
@@ -285,11 +230,11 @@ label:focus {
 
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
-    background-color: #0C0C0C;
+    background-color: transparent;
 }
 
 #idle_inhibitor {
-    background-color: #0C0C0C;
+    background-color: transparent;
     color: #f5c2e7;
 }
 

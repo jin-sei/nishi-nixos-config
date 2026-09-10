@@ -97,7 +97,15 @@
 		enable = true;
 		settings = {
 			mainBar = {
-				height = 30;
+				layer = "top";
+				position = "bottom";
+				
+				margin-top = 3;
+				margin-bottom = 3;
+				margin-left = 3;
+				margin-right = 3;
+
+				height = 35;
 				spacing = 0;
 				
 				modules-left = [
