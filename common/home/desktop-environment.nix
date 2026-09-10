@@ -117,6 +117,7 @@ in
 				modules-center = [ ];
 				modules-right = [
 					"tray"
+					"hyprland/language"
 					"network"
 					"pulseaudio"
 				] ++ lib.optionals isLaptop [
@@ -151,6 +152,14 @@ in
 				
 				tray = {
 					spacing = 17;
+				};
+				
+				"hyprland/language" = {
+					# format = "<span color='${waybarEtiquetteColor}'>配列</span>";
+					format-en = "<span color='${waybarEtiquetteColor}'>配列:</span>US";
+					format-fr = "<span color='${waybarEtiquetteColor}'>配列:</span>FR";
+					keyboard-name = "at-translated-set-2-keyboard";
+					on-click = "hyprctl switchxkblayout all next";
 				};
 				
 				clock = {
