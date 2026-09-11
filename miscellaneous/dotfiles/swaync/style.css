@@ -78,7 +78,9 @@ scrollbar trough {
 }
 
 .notification-content .image {
-    border-radius: 10px;
+  padding:0;
+  margin-right: 5px;
+  border-radius: 10px;
 }
 
 .notification .notification-content {
