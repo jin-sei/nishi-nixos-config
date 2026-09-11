@@ -177,8 +177,7 @@ in
 				
 				clock = {
 					on-click = "swaync-client -t";
-					format ="{0:%d}<span color='${waybarEtiquetteColor}'>日</span>{0:%m}<span color='${waybarEtiquetteColor}'>月</span>{0:%Y}<span color='${waybarEtiquetteColor}'>年</span> {0:%H}<span color='${waybarEtiquetteColor}'>時</span>{0:%M}<span color='${waybarEtiquetteColor}'>分</span>";# "{:%d日%m月%Y年 %H時%M分}";
-					# format-alt = "{:%d日%m月%Y年}";
+					format ="{0:%d}<span color='${waybarEtiquetteColor}'>日</span>{0:%m}<span color='${waybarEtiquetteColor}'>月</span>{0:%Y}<span color='${waybarEtiquetteColor}'>年</span> {0:%H}<span color='${waybarEtiquetteColor}'>時</span>{0:%M}<span color='${waybarEtiquetteColor}'>分</span>";
 					tooltip = false;
 					tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
 					calendar = {
@@ -217,7 +216,7 @@ in
 					format-disconnected = "<span color='${waybarEtiquetteColor}'>オフライン</span>";
 					format-alt = "<span color='${waybarEtiquetteColor}'>接続:</span>{ipaddr}";
 					tooltip = false;
-					on-click-right = "alacritty --class WaybarSpawned -e nmtui";
+					on-click-right = "alacritty --class WaybarSpawned -T NetworkManager -e nmtui";
 				};
 				
 				pulseaudio = {
@@ -225,7 +224,7 @@ in
 					format-bluetooth = "<span color='${waybarEtiquetteColor}'>無線:</span>{volume}%";
 					tooltip = false;
 					on-click = "wpctl set-mute @DEFAULT_SINK@ toggle";
-					on-click-right = "alacritty --class WaybarSpawned -e wiremix";
+					on-click-right = "alacritty --class WaybarSpawned -T PipeWire -e wiremix";
 				};
 			};
 		};
