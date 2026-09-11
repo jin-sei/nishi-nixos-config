@@ -112,6 +112,7 @@
 		python3
 		
 		lshw # list hardware
+		psmisc # pstree, killall...
 		wget
 	     	curl
 		zip
