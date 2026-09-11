@@ -152,6 +152,7 @@ in
 				
 				tray = {
 					spacing = 17;
+					reverse-direction = true;
 				};
 				
 				"hyprland/language" = {
