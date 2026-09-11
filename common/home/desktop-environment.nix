@@ -89,6 +89,9 @@ in
 			];
 		};
 	};
+
+	# service: playerctld (for waybar media control)
+	# services.playerctld.enable = true;
 	
 	# waybar
 	xdg.configFile."waybar/style.css" = {
@@ -124,6 +127,7 @@ in
 					"backlight"
 					"battery"
 				] ++ [
+					# "mpris"
 					"clock"
 				];
 				
@@ -154,6 +158,14 @@ in
 					spacing = 17;
 					reverse-direction = true;
 				};
+
+				# mpris = {
+				# 	format = "{title}";
+				# 	format-stopped = "No media";
+				# 	tooltip = false;
+				# 	min-length=20;
+				# 	max-length=20;
+				# };
 				
 				"hyprland/language" = {
 					# format = "<span color='${waybarEtiquetteColor}'>配列</span>";
