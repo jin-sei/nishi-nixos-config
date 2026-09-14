@@ -19,10 +19,10 @@
       				home-manager.follows = "home-manager-unstable";
     			};
   		};
-		areofyl-fetch = {
-			url = "github:areofyl/fetch";
-			inputs.nixpkgs.follows = "nixpkgs-unstable";
-		};
+		# areofyl-fetch = {
+		# 	url = "github:areofyl/fetch";
+		# 	inputs.nixpkgs.follows = "nixpkgs-unstable";
+		# };
 	};
 	
 	outputs = {self, nixpkgs, nixpkgs-unstable, home-manager, home-manager-unstable, ...}@inputs: 
@@ -83,6 +83,7 @@
 					./common/home/home-manager.nix
 					#./common/home/anki.nix
 					./common/home/shell.nix
+					./common/home/shell-apps.nix
 					./common/home/neovim.nix
 					./common/home/desktop-environment.nix
 					./common/home/apps.nix
@@ -103,6 +104,7 @@
 					./common/home/home-manager.nix
 					#./common/home/anki.nix
 					./common/home/shell.nix
+					./common/home/shell-apps.nix
 					./common/home/neovim.nix
 					./common/home/desktop-environment.nix
 					./common/home/apps.nix
@@ -121,6 +123,7 @@
 				modules = [
 					./common/home/home-manager.nix
 					./common/home/shell.nix
+					./common/home/shell-apps.nix
 					./common/home/neovim.nix
 				];
 			};

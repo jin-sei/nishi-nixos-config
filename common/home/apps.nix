@@ -54,7 +54,7 @@
 	imports = [
 		# importing some extra/unstable modules options
 		# inputs.home-manager-unstable.modules.programs.something.nix
-		inputs.areofyl-fetch.homeManagerModules.default
+		# inputs.areofyl-fetch.homeManagerModules.default
 	];
 
 	# enable autostarts 
@@ -68,89 +68,30 @@
 		flake = "${config.home.homeDirectory}/nishi-nixos-config"; # sets NH_OS_FLAKE variable
 	};
 
-	# fastfetch
-	programs.fastfetch = {
-		enable = true;
-		settings = {
-			logo = {
-				source = "OSX";
-				padding = {right=5;left=3;};
-			};
-			display = {
-				color = "blue";
-				separator = ": ";
-				key = {width=14;};
-			};
-			modules = [
-				"title"
-       				{
-					type = "separator";
-					string = "─";
-				}
-       				"os"
-       				"kernel"
-       				"packages"
-       				"shell"
-       				"wm"
-       				"host"
-       				"cpu"
-       				"gpu"
-       				"memory"
-       				"disk"
-       				"terminal"
-       				"break"
-       				"colors"	
-			];
-		};
-	};
-	
 	# fetch
-	programs.fetch = {
-		enable = true;
-		labelColor = "blue";
-		separator = "─";
-		info = [
-			"os"
-			"kernel"
-			"packages"
-			"shell"
-			"wm"
-			"host"
-			"cpu"
-			"gpu"
-			"memory"
-			"disk"
-			"terminal"
-			"colors"
-		];
-		size = 1.0;
-		speed = 1.0;
-    		spin = "y";
-	};
+	# programs.fetch = {
+	# 	enable = true;
+	# 	labelColor = "blue";
+	# 	separator = "─";
+	# 	info = [
+	# 		"os"
+	# 		"kernel"
+	# 		"packages"
+	# 		"shell"
+	# 		"wm"
+	# 		"host"
+	# 		"cpu"
+	# 		"gpu"
+	# 		"memory"
+	# 		"disk"
+	# 		"terminal"
+	# 		"colors"
+	# 	];
+	# 	size = 1.0;
+	# 	speed = 1.0;
+    	# 	spin = "y";
+	# };
 
-	# git
-	programs.git = {
-		enable = true;
-		settings = {
-			user = {
-				name = "Jin Sei";
-				email = "nils.rivaillon@protonmail.com";
-			};
-			init.defaultBranch = "main";
-			core.editor = "vim";
-		};
-	};
-
-	# btop
-	programs.btop = {
-		enable = true;
-		settings = {
-			color_theme = "TTY";
-			theme_background = false;
-
-		};
-	};
-	
 	# obsidian
 	home.file."Vault/jinsei-obsidian/.obsidian/themes/OLED.Black" = {
 		source = inputs.self + "/miscellaneous/themes/obsidian" ;
