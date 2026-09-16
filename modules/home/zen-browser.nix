@@ -45,6 +45,7 @@
 				force = true;
 				default = "ddg";
 				engines = {
+
 					nix-packages = {
     						name = "Nix Packages";
 						urls = [{
@@ -58,6 +59,13 @@
 						icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
 						definedAliases = [ "@nix" ];
 					};
+					
+					letterboxd = {
+    						name = "Letterboxd";
+						urls = [{ template = "https://letterboxd.com/search/{searchTerms}/"; }];
+						definedAliases = [ "@let" ];
+					};
+
 
 					youtube = {
 						name = "YouTube";
