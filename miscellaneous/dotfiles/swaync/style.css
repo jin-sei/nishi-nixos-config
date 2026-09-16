@@ -53,16 +53,35 @@ scrollbar trough {
   opacity:0;
 }
 
+.notification-group-buttons {
+  margin-right: 10px;
+}
+
 .notification-group-close-button {
   opacity: 0;
 }
 
 .notification-group-collapse-button, .notification-group-close-all-button {
-  background: #000000;
   border-radius:50%;
   border: 1px solid rgb(59, 59, 59);
   margin-right: 10px;
-  padding: 3px;
+  padding: 1px;
+}
+
+.notification-group-collapse-button {
+  background-color: #F9E2AF;
+}
+
+.notification-group-close-all-button {
+  background-color: #F38BA8;
+}
+
+.notification-group-collapse-button image {
+  opacity:0;
+} 
+
+.notification-group-close-all-button image {
+  opacity:0;
 }
 
 .notification-group-header {
@@ -96,8 +115,6 @@ scrollbar trough {
   padding:0;
   margin-right: 5px;
   border-radius: 10px;
-  display: flex;
-  width: fit-content;
   font-size: 0;
 }
 
@@ -335,5 +352,4 @@ scrollbar trough {
 
 image.app-icon.bottom.right {
   opacity: 0;
-  visibility: hidden;
 }
