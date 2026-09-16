@@ -223,7 +223,7 @@ in
 					format = "<span color='${waybarEtiquetteColor}'>音量:</span>{volume:02}%";
 					format-bluetooth = "<span color='${waybarEtiquetteColor}'>無線:</span>{volume:02}%";
 					tooltip = false;
-					on-click = "wpctl set-mute @DEFAULT_SINK@ toggle";
+					on-click = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
 					on-click-right = "alacritty --class WaybarSpawned -T PipeWire -e wiremix";
 				};
 			};
