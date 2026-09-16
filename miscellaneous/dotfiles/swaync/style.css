@@ -1,7 +1,7 @@
 * {
   all: unset;
   font-size: 14px;
-  font-family: "M PLUS 1 Code";
+  font-family: "M PLUS 1";
   transition: 200ms;
 }
 
@@ -39,10 +39,12 @@ trough {
 }
 
 scrollbar slider {
+  opacity: 0;
   background: transparent;
 }
 
 scrollbar trough {
+  opacity: 0;
   background: transparent;
 }
 
@@ -81,6 +83,9 @@ scrollbar trough {
   padding:0;
   margin-right: 5px;
   border-radius: 10px;
+  display: flex;
+  width: fit-content;
+  font-size: 0;
 }
 
 .notification .notification-content {
@@ -103,6 +108,7 @@ scrollbar trough {
 
 .notification-content .body {
   color: #bac2de;
+  line-height:0.9;
 }
 
 .notification > *:last-child > * {
@@ -127,18 +133,16 @@ scrollbar trough {
 
 .notification .notification-action {
   color: #cdd6f4;
-  box-shadow: inset 0 0 0 1px #45475a;
   margin: 4px;
   padding: 8px;
   font-size: 0.2rem; /* controls the button size not text size*/
-}
-
-.notification .notification-action {
   background-color: #000000;
+  border: 1px solid rgb(59, 59, 59);
+  border-radius: 13px;
 }
 
 .notification .notification-action:hover {
-  background-color: #45475a;
+  background-color: #595959aa;
 }
 
 .notification .notification-action:active {
@@ -176,7 +180,6 @@ scrollbar trough {
 }
 
 .control-center .notification-background .notification.low {
-  opacity: 0.8;
 }
 
 .widget-title {
@@ -217,7 +220,6 @@ scrollbar trough {
 
 scrollbar slider {
   margin: -3px;
-  opacity: 0.8;
 }
 
 scrollbar trough {
