@@ -79,8 +79,12 @@
 				
 				"network.cookie.lifetimePolicy" = 2;
 				
+				# enables fullscreen without taking the whole desktop space
 				"full-screen-api.ignore-widgets" = true;
+				# disables the zen black padding around the content
 				"zen.theme.content-element-separation" = 0;
+				# disable showing zen side panel on mouse hover
+				"zen.view.compact.show-sidebar-and-toolbar-on-hover" = false;
 
 				# "browser.translations.enable" = false;
 				"browser.translations.automaticallyPopup" = false;
