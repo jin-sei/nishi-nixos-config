@@ -210,11 +210,11 @@ in
 				
 				network = {
 					format-wifi = "<span color='${waybarEtiquetteColor}'>接続:</span>{essid}";
-					format-ethernet = "<span color='${waybarEtiquetteColor}'>イーサネット:</span>{ipaddr}/{cidr}";
+					format-ethernet = "<span color='${waybarEtiquetteColor}'>イーサネット</span>";
 					format-linked = "<span color='${waybarEtiquetteColor}'>リンク</span>";
 					format-disabled = "<span color='${waybarEtiquetteColor}'>ブロック</span>";
-					format-disconnected = "<span color='${waybarEtiquetteColor}'>オフライン</span>";
-					format-alt = "<span color='${waybarEtiquetteColor}'>接続:</span>{ipaddr}";
+					format-disconnected = "オフライン";
+					# format-alt = "<span color='${waybarEtiquetteColor}'>接続:</span>{ipaddr}";
 					tooltip = false;
 					on-click-right = "alacritty --class WaybarSpawned -T NetworkManager -e nmtui";
 				};
