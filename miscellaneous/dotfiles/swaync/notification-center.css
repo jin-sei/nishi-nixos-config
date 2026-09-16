@@ -1,0 +1,209 @@
+* {
+  all: unset;
+  font-size: 14px;
+  font-family: "M PLUS 1";
+  transition: 200ms;
+}
+
+/* ==================== CONTROL CENTER ==================== */
+
+.control-center-list-placeholder {
+  opacity:0;
+}
+
+trough highlight {
+  background: #cdd6f4;
+}
+
+scale {
+  margin: 0 7px;
+}
+
+scale trough {
+  margin: 0rem 1rem;
+  min-height: 8px;
+  min-width: 70px;
+}
+
+trough slider {
+  margin: -10px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
+  transition: all 0.2s ease;
+  background-color: #89b4fa;
+}
+
+trough slider:hover {
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.8), 0 0 8px #89b4fa;
+}
+
+trough {
+  background-color: #000000;
+}
+
+scrollbar slider {
+  margin: -3px;
+  opacity: 0;
+  background: transparent;
+}
+
+scrollbar trough {
+  margin: 2px 0;
+  opacity: 0;
+  background: transparent;
+}
+
+.control-center {
+  background: transparent;
+  border: none;
+  color: #cdd6f4;
+  padding: 14px;
+}
+
+.control-center .notification-background {
+  margin: 4px 10px;
+}
+
+.control-center .notification-background .notification {
+}
+
+.control-center .notification-background .notification.low {
+}
+
+.widget-title {
+  background-color: rgb(0, 0, 0);
+  border: 1px solid rgb(59, 59, 59);
+  border-radius: 17px;
+  padding: 12px;
+  margin: 10px;
+}
+
+.control-center .widget-title > label {
+  color: #cdd6f4;
+  font-size: 1.3em;
+}
+
+.control-center .widget-title button {
+  color: #cdd6f4;
+  background-color: #AAAAAA;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.control-center .widget-title button:hover {
+  background-color: #45475a;
+}
+
+.control-center .widget-title button:active {
+  background-color: #585b70;
+}
+
+.control-center .notification-group {
+  margin-top: 10px;
+}
+
+.control-center .notification-group:focus .notification-background {
+  background-color: #000000;
+}
+
+.control-center .widget-label > label {
+  color: #cdd6f4;
+  font-size: 2rem;
+}
+
+.image {
+  padding-right: 0.5rem;
+}
+
+image.app-icon.bottom.right {
+  opacity: 0;
+}
+
+/* ==================== DO NOT DISTURB ==================== */
+
+.widget-dnd {
+  background-color: rgb(0, 0, 0);
+  border: 1px solid rgb(59, 59, 59);
+  border-radius: 17px;
+  margin: 10px;
+  margin-top: 20px;
+  padding: 12px;
+}
+
+.widget-dnd > label {
+  font-size: 1.3rem;
+}
+
+.widget-dnd > switch {
+  font-size: initial;
+  background: #000000;
+  border: 1px solid rgb(59, 59, 59);
+  border-radius: 50px;
+  box-shadow: none;
+}
+
+.widget-dnd > switch:checked {
+  background: #E6849F;
+}
+
+.widget-dnd > switch slider {
+  background: #5A5555;
+  border-radius: 50%;
+}
+
+/* ==================== MPRIS ==================== */
+
+.widget-mpris-player {
+  background: #000000;
+  color: #cdd6f4;
+  border-radius: 23px;
+  margin: 10px;
+}
+
+.mpris-overlay {
+  background-color: #000000;
+  opacity: 0.9;
+  padding: 15px 10px;
+  border: 1px solid rgb(59, 59, 59);
+  border-radius: 23px;
+}
+
+.widget-mpris-album-art {
+  -gtk-icon-size: 150px;
+  margin: 0 10px;
+  border-radius: 13px;
+}
+
+.widget-mpris-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #cdd6f4;
+}
+
+.widget-mpris-subtitle {
+  font-size: 1rem;
+  color: #bac2de;
+}
+
+.widget-mpris button {
+  color: #cdd6f4;
+  margin: 0 5px;
+  padding: 2px;
+}
+
+.widget-mpris button image {
+  -gtk-icon-size: 1.8rem;
+}
+
+.widget-mpris button:hover {
+  background-color: #000000;
+  border-radius: 8px;
+}
+
+.widget-mpris button:active {
+  background-color: #45475a;
+}
+
+.widget-mpris button:disabled {
+  opacity: 0.5;
+}
+

@@ -44,7 +44,13 @@
     },
     "mpris": {
       "image-size": 60,
-      "image-radius": 0
+      "image-radius": 0,
+      "blacklist": [
+        "firefox",
+        "chromium",
+        "mpv",
+        "playerctl"
+      ]
     }
   }
 }
