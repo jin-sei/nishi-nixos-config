@@ -188,7 +188,7 @@ in
 				};
 			
 				backlight = {
-					format = "<span color='${waybarEtiquetteColor}'>輝度:</span>{percent}%";
+					format = "<span color='${waybarEtiquetteColor}'>輝度:</span>{percent:02}%";
 					tooltip = false;
 				};
 				
@@ -198,10 +198,10 @@ in
 						critical = 15;
 					};
 					tooltip = false;
-					format = "<span color='${waybarEtiquetteColor}'>電池:</span>{capacity}%";
-					format-full = "<span color='${waybarEtiquetteColor}'>電池:</span>{capacity}%";
-					format-charging = "<span color='${waybarEtiquetteColor}'>充電:</span>{capacity}%";
-					format-plugged = "<span color='${waybarEtiquetteColor}'>有線:</span>{capacity}%";
+					format = "<span color='${waybarEtiquetteColor}'>電池:</span>{capacity:02}%";
+					format-full = "<span color='${waybarEtiquetteColor}'>電池:</span>{capacity:02}%";
+					format-charging = "<span color='${waybarEtiquetteColor}'>充電:</span>{capacity:02}%";
+					format-plugged = "<span color='${waybarEtiquetteColor}'>有線:</span>{capacity:02}%";
 				};
 				
 				"battery#bat2" = {
@@ -220,8 +220,8 @@ in
 				};
 				
 				pulseaudio = {
-					format = "<span color='${waybarEtiquetteColor}'>音量:</span>{volume}%";
-					format-bluetooth = "<span color='${waybarEtiquetteColor}'>無線:</span>{volume}%";
+					format = "<span color='${waybarEtiquetteColor}'>音量:</span>{volume:02}%";
+					format-bluetooth = "<span color='${waybarEtiquetteColor}'>無線:</span>{volume:02}%";
 					tooltip = false;
 					on-click = "wpctl set-mute @DEFAULT_SINK@ toggle";
 					on-click-right = "alacritty --class WaybarSpawned -T PipeWire -e wiremix";
