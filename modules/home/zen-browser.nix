@@ -94,7 +94,7 @@
 				# disable showing zen side panel on mouse hover
 				"zen.view.compact.show-sidebar-and-toolbar-on-hover" = false;
 
-				# "browser.translations.enable" = false;
+				"browser.translations.enable" = true;
 				"browser.translations.automaticallyPopup" = false;
 				"extensions.formautofill.addresses.enabled" = false;
 				"extensions.formautofill.creditCards.enabled" = false;
