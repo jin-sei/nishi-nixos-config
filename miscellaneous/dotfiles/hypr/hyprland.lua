@@ -26,6 +26,7 @@ end)
 local terminal 	= "alacritty"
 local files 	= "nautilus -w"
 local launcher 	= "rofi -show drun"
+local browser 	= "zen-beta"
 
 -------------------------------
 ---- ENVIRONMENT VARIABLES ----
@@ -66,6 +67,7 @@ local altMod = "ALT"
 -- launching programs
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + F", hl.dsp.exec_cmd(files))
+hl.bind(mainMod .. " + N", hl.dsp.exec_cmd(browser))
 hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(launcher))
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("hyprlock"))
 hl.bind("Print", hl.dsp.exec_cmd("hyprshot -m region --clipboard-only"))
