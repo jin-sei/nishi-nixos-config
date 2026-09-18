@@ -160,6 +160,11 @@ hl.window_rule({
 	size = {800, 500};
 })
 
+hl.workspace_rule({
+	workspace = "s[true]",
+	layout = "dwindle"
+})
+
 ---------------
 ---- INPUT ----
 ---------------
