@@ -46,31 +46,21 @@ hl.env("LIBVA_DRIVER_NAME", "nvidia")
 hl.env("XMODIFIERS", "@im=fcitx")
 hl.env("QT_IM_MODULE", "fcitx")
 
-----------------
-----  MISC  ----
-----------------
-
-hl.config({
-	misc = {
-		force_default_wallpaper = 0,
-		disable_hyprland_logo   = true,
-	},
-})
-
 ---------------------
 ---- KEYBINDINGS ----
 ---------------------
 
 local mainMod = "SUPER"
 local altMod = "ALT"
+local otherMod =  "CTRL"
 
 -- launching programs
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(terminal))
-hl.bind(mainMod .. " + F", hl.dsp.exec_cmd(files))
 hl.bind(mainMod .. " + N", hl.dsp.exec_cmd(browser))
 hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(launcher))
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("hyprlock"))
 hl.bind("Print", hl.dsp.exec_cmd("hyprshot -m region --clipboard-only"))
+-- hl.bind(mainMod .. " + F", hl.dsp.exec_cmd(files))
 
 -- controlling programs
 hl.bind(mainMod .. " + J", hl.dsp.exec_cmd("pkill -SIGUSR1 waybar"))
@@ -82,8 +72,26 @@ hl.bind("F10", hl.dsp.exec_cmd("brightnessctl set +10%"))
 
 -- actions on windows
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
-hl.bind(mainMod .. " + M", hl.dsp.window.fullscreen({ action = "toggle" }))
-hl.bind(mainMod .. " + Q", hl.dsp.window.close())
+hl.bind(mainMod .. " + " .. otherMod .. " + M", hl.dsp.window.fullscreen({ action = "toggle" }))
+hl.bind(mainMod .. " + Q", hl.dsp.window.close()) 
+
+-- actions on windows (scrolling layout specific)
+hl.bind(mainMod .. " + F", hl.dsp.layout("fit visible"))
+hl.bind(mainMod .. " + M", function()
+	hl.dispatch(hl.dsp.layout("colresize +conf"))
+	hl.dispatch(hl.dsp.layout("focus left"))
+	hl.dispatch(hl.dsp.layout("focus right"))
+end)
+hl.bind(mainMod .. " + " .. otherMod .. " + right", function()
+	hl.dispatch(hl.dsp.layout("swapcol r"))
+	hl.dispatch(hl.dsp.layout("focus left"))
+	hl.dispatch(hl.dsp.layout("focus right"))
+end)
+hl.bind(mainMod .. " + " .. otherMod .. " + left", function()
+	hl.dispatch(hl.dsp.layout("swapcol l"))	
+	hl.dispatch(hl.dsp.layout("focus right"))
+	hl.dispatch(hl.dsp.layout("focus left"))
+end)
 
 -- Move/resize windows with mainMod (+ALT) + dragging
 hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(),   { mouse = true })
@@ -96,15 +104,15 @@ hl.bind(mainMod .. " + up",    hl.dsp.focus({ direction = "up" }))
 hl.bind(mainMod .. " + down",  hl.dsp.focus({ direction = "down" }))
 
 -- move active window to workspace +1 or -1 with maindMod + ALT + LEFT or RIGHT
-hl.bind(mainMod .. " + " .. altMod ..  " + left",     hl.dsp.window.move({ workspace = "-1" }))
-hl.bind(mainMod .. " + " .. altMod ..  " + right",     hl.dsp.window.move({ workspace = "+1" }))
+hl.bind(mainMod .. " + " .. altMod ..  " + left", hl.dsp.window.move({ workspace = "-1" }))
+hl.bind(mainMod .. " + " .. altMod ..  " + right", hl.dsp.window.move({ workspace = "+1" }))
 
 -- switch workspaces with mainMod + [0-9]
 -- move active window to a workspace with mainMod + altMod + [0-9]
 for i = 1, 10 do
     local key = i % 10 -- 10 maps to key 0
-    hl.bind(mainMod .. " + code:" .. key+9,             hl.dsp.focus({ workspace = i}))
-    hl.bind(mainMod .. " + " .. altMod ..  " + code:" .. key+9,     hl.dsp.window.move({ workspace = i }))
+    hl.bind(mainMod .. " + code:" .. key+9, hl.dsp.focus({ workspace = i}))
+    hl.bind(mainMod .. " + " .. altMod ..  " + code:" .. key+9, hl.dsp.window.move({ workspace = i }))
 end
 
 --- cycling workspaces with tab
@@ -187,6 +195,25 @@ hl.config({
 	},
 })
 
+-----------------
+---- LAYOUTS ----
+-----------------
+
+hl.config({
+	general = {	
+		layout = "scrolling",
+	},
+	scrolling = {
+		direction = "right",
+
+		explicit_column_widths = "0.5, 1.0",
+		column_width = 0.5,
+
+		wrap_focus = false,
+		wrap_swapcol = false,
+	},
+})
+
 -----------------------
 ---- LOOK AND FEEL ----
 -----------------------
@@ -208,8 +235,6 @@ hl.config({
 		
 		-- Please see https://wiki.hypr.land/Configuring/Advanced-and-Cool/Tearing/ before you turn this on
 		allow_tearing = false,
-		
-		layout = "scrolling",
 	},
 	
 	decoration = {
@@ -236,6 +261,12 @@ hl.config({
 	animations = {
 		enabled = true,
 	},
+
+	misc = {
+		force_default_wallpaper = 0,
+		disable_hyprland_logo   = true,
+	},
+
 })
 
 -- curves

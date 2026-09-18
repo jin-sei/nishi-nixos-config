@@ -41,6 +41,7 @@
 			nishi-desktop = nixpkgs.lib.nixosSystem {
 				specialArgs = {
 					inherit inputs; 
+					inherit pkgs-unstable;
 					user = personal-user-01;
 				};
 				modules = [
@@ -56,6 +57,7 @@
 			nishi-laptop = nixpkgs.lib.nixosSystem {
 				specialArgs = {
 					inherit inputs;
+					inherit pkgs-unstable;
 					user = personal-user-01;
 				};
 				modules = [

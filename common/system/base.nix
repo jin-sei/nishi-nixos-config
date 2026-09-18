@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, user, ... }:
+{ config, pkgs, pkgs-unstable, inputs, user, ... }:
 
 {
 	# networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -151,6 +151,7 @@
 	# enabling hyprland module
 	programs.hyprland = {
 		enable = true;
+		package = pkgs.hyprland;
 		withUWSM = true;
     		xwayland.enable = true;
 		portalPackage = pkgs.xdg-desktop-portal-hyprland;
