@@ -51,6 +51,13 @@ garbage collections dry run (see how much space I can save)
 nix-collect-garbage --dry-run
 ```
 
+clean with nh
+
+```bash
+nh clean all --keep 10 --keep-since 7d --dry
+nh clean all --keep 10 --keep-since 7d
+```
+
 list generations
 
 ```bash
