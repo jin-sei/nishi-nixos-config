@@ -66,6 +66,7 @@
 					./modules/system/nvidia-prime.nix
 					./modules/system/syncthing.nix
 					./modules/system/laptop-utils.nix
+					./modules/system/steam.nix
 					./hosts/laptop/default.nix
 					./hosts/laptop/hardware-configuration.nix
 				];
