@@ -33,7 +33,6 @@
 			papers	
 		zathura
 		keepassxc
-		ente-desktop
 
 		ungoogled-chromium
 		signal-desktop
@@ -49,6 +48,7 @@
 	# packages (unstable)
   	]) ++ (with pkgs-unstable; [
 		# some unstable packages
+		ente-desktop
 	]);
 
 	imports = [
