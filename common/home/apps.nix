@@ -43,12 +43,11 @@
 		anki
 
 		proton-vpn
-		proton-pass
 		qbittorrent
 
 	# packages (unstable)
   	]) ++ (with pkgs-unstable; [
-		# some unstable package
+		proton-pass
 	]);
 
 	imports = [
