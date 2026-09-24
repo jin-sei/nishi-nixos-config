@@ -162,14 +162,13 @@ image.app-icon.bottom.right {
 .mpris-overlay {
   background-color: #000000;
   opacity: 0.9;
-  padding: 15px 10px;
+  padding: 40px 10px 15px 10px;
   border: 1px solid rgb(59, 59, 59);
   border-radius: 23px;
 }
 
 .widget-mpris-album-art {
-  -gtk-icon-size: 150px;
-  margin: 0 10px;
+  margin: 0px 5px 0px 10px;
   border-radius: 13px;
 }
 
@@ -185,9 +184,9 @@ image.app-icon.bottom.right {
 }
 
 .widget-mpris button {
-  color: #cdd6f4;
-  margin: 0 5px;
-  padding: 2px;
+    opacity:0;
+    padding:0;
+    margin:0;
 }
 
 .widget-mpris button image {
