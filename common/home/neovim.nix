@@ -20,12 +20,13 @@
 			require("settings")
 			require("keymaps")
 			require("treesitter")
+			require("column")
 		'';
-			# require("lsp-servers")
 
 		plugins = with pkgs.vimPlugins; [
 			nvim-treesitter.withAllGrammars
 			nvim-lspconfig
+			statuscol-nvim
     		];
 	};
 }
