@@ -78,7 +78,7 @@
 						definedAliases = [ "@you" "@yt" ];
 					};
 
-					"Bing".metaData.hidden = true;
+					"bing".metaData.hidden = true;
         				"perplexity".metaData.hidden = true;
 				};
 			};
