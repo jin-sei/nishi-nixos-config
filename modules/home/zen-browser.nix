@@ -66,6 +66,11 @@
 						definedAliases = [ "@let" ];
 					};
 
+					jisho = {
+    						name = "Jisho";
+						urls = [{ template = "https://jisho.org/search/{searchTerms}"; }];
+						definedAliases = [ "@jap" ];
+					};
 
 					youtube = {
 						name = "YouTube";
