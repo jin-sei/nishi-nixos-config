@@ -39,7 +39,7 @@
 			"https://web.whatsapp.com"
 			"https://github.com"
 		];
-		
+
 		profiles.default = {
 			search = {
 				force = true;
@@ -76,7 +76,10 @@
 						name = "YouTube";
 						urls = [{ template = "https://www.youtube.com/results?search_query={searchTerms}"; }];
 						definedAliases = [ "@you" "@yt" ];
-					};	
+					};
+
+					"Bing".metaData.hidden = true;
+        				"perplexity".metaData.hidden = true;
 				};
 			};
 			settings = {
