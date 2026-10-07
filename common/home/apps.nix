@@ -31,8 +31,9 @@
 		nautilus
 			ffmpegthumbnailer
 			papers	
+
 		zathura
-		keepassxc
+		typst
 
 		ungoogled-chromium
 		signal-desktop
@@ -43,6 +44,7 @@
 
 		proton-vpn
 		qbittorrent
+		# keepassxc
 
 	# packages (unstable)
   	]) ++ (with pkgs-unstable; [
