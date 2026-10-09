@@ -41,9 +41,9 @@ in
 	# rofi
 	programs.rofi = {
 		enable = true;
-		theme = inputs.self + "/miscellaneous/themes/rofi/squared-dark.rasi";
+		theme = inputs.self + "/miscellaneous/themes/rofi/zen-rofi.rasi";
 		extraConfig = {
-			show-icons = false;
+			show-icons = true;
 		};
 	};
 	

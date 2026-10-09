@@ -1,0 +1,130 @@
+/* MODIFIED ROFI SQUARED THEME */
+
+* {
+    font:   "M PLUS 1 Code 14";
+
+    /* REQUEST 1: Changed from #121212 to pure black (#000000) */
+    bg0:     #000000;
+    bg1:     #404040;
+    fg0:     #eeffff;
+
+    /* REQUEST 7: Changed selected accent color to slightly lighter than black */
+    accent-color:     #0C0C0C;
+    urgent-color:     #ffcb6b;
+
+    /* REQUEST 5: Added a variable for the border color */
+    border-color:     #595959AA;
+    
+    /* REQUEST 4: Added a variable for the "drun" text. I removed the "AA" (transparency) 
+       from the hex code so the text remains readable against the black background */
+    prompt-color:     #595959;
+
+    background-color:   transparent;
+    text-color:         @fg0;
+
+    margin:     0;
+    padding:    0;
+    spacing:    0;
+}
+
+window {
+    location:   center;
+    
+    /* REQUEST 6: Made the launcher wider (changed from 480 to 600) */
+    width:      600;
+
+    background-color:   @bg0;
+    
+    /* REQUEST 5: Added a 1px wide border using the requested color */
+    border:         1px;
+    border-color:   @border-color;
+    
+    /* REQUEST 2: Added a 13px border radius to the main window */
+    border-radius:  13px;
+    
+    /* EXTRA TWEAK: Added 10px padding inside the window so the rounded entries 
+       don't awkwardly touch the rounded edges of the main window */
+    padding:        10px;
+}
+
+inputbar {
+    spacing:    8px;
+    padding:    8px;
+
+    /* REQUEST 3: Changed from @bg1 to @bg0 to make the typing area pure black */
+    background-color:   @bg0;
+}
+
+prompt, entry, element-icon, element-text {
+    vertical-align: 0.5;
+}
+
+prompt {
+    /* REQUEST 4: Applied the darker, readable color to the "drun" text */
+    text-color: @prompt-color;
+}
+
+textbox {
+    padding:            8px;
+    
+    /* REQUEST 3: Made fallback textboxes pure black as well */
+    background-color:   @bg0;
+}
+
+listview {
+    padding:    8px 0;
+    lines:      5;
+    columns:    1;
+
+    fixed-height: 0;
+}
+
+element {
+    /* REQUEST 8: Made entries taller by increasing vertical padding from 8px to 14px 
+       (format is: "vertical horizontal") */
+    padding:    14px 8px;
+    spacing:    8px;
+    
+    /* REQUEST 2: Added 7px border radius to the individual entries */
+    border-radius: 7px;
+}
+
+element normal normal {
+    text-color: @fg0;
+}
+
+element normal urgent {
+    text-color: @urgent-color;
+}
+
+element normal active {
+    text-color: @accent-color;
+}
+
+element alternate active {
+    text-color: @accent-color;
+}
+
+element selected {
+    /* NECESSARY FIX: The original config made selected text black (@bg0). 
+       Because your new accent-color is almost black, I changed this to @fg0 (white) 
+       so you can actually read the text when you select an entry! */
+    text-color: @fg0;
+}
+
+element selected normal, element selected active {
+    background-color:   @accent-color;
+}
+
+element selected urgent {
+    background-color:   @urgent-color;
+}
+
+element-icon {
+    size:   0.8em;
+}
+
+element-text {
+    text-color: inherit;
+    highlight: none;
+}
