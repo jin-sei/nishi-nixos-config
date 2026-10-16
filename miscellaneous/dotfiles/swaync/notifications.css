@@ -19,6 +19,10 @@
   padding: 1px;
 }
 
+.notification-group.collapsed .notification-row:not(:last-child) .notification-content {
+  opacity: 0;
+}
+
 .notification-group-collapse-button {
   background-color: #F9E2AF;
 }
