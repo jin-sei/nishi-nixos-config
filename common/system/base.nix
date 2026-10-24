@@ -10,6 +10,9 @@
 	# Enable networking
 	networking.networkmanager.enable = true;
 
+	# use nftables instead of iptables
+	networking.nftables.enable = true;
+
 	# for localsend	
 	networking.firewall.allowedTCPPorts = [ 53317 ];
 	networking.firewall.allowedUDPPorts = [ 53317 ];	
