@@ -13,6 +13,7 @@
 		wl-clipboard
 		gdu
 		wiremix
+		libnotify # provides notify-send
 		localsend
 		syncplay
 		android-tools
