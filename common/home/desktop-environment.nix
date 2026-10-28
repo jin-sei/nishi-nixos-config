@@ -90,6 +90,20 @@ in
 		};
 	};
 
+	services.hyprsunset = {
+		enable = true;
+		settings = {
+			profile = [{
+				time = "06:00";
+				identity = true; #disables the filter 
+			}
+			{
+				time = "22:00";
+				temperature = 4000; # night filter 
+			}];
+		};
+	};
+
 	# service: playerctld (for waybar media control)
 	# services.playerctld.enable = true;
 	
