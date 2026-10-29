@@ -58,12 +58,12 @@ local otherMod =  "CTRL"
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + N", hl.dsp.exec_cmd(browser))
 hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(launcher))
-hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("hyprlock"))
+hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("hyprlock"))
 hl.bind("Print", hl.dsp.exec_cmd("hyprshot -m region --clipboard-only"))
 -- hl.bind(mainMod .. " + F", hl.dsp.exec_cmd(files))
 
 -- controlling programs
-hl.bind(mainMod .. " + J", hl.dsp.exec_cmd("pkill -SIGUSR1 waybar"))
+hl.bind(mainMod .. " + G", hl.dsp.exec_cmd("pkill -SIGUSR1 waybar"))
 hl.bind("F3", hl.dsp.exec_cmd("wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 5%+"))
 hl.bind("F2", hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"))
 hl.bind("F1", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"))
@@ -82,12 +82,27 @@ hl.bind(mainMod .. " + M", function()
 	hl.dispatch(hl.dsp.layout("focus left"))
 	hl.dispatch(hl.dsp.layout("focus right"))
 end)
-hl.bind(mainMod .. " + " .. otherMod .. " + right", function()
+hl.bind(mainMod .. " + code:20", function() -- minus key (US)
+	hl.dispatch(hl.dsp.layout("colresize 0.333"))
+	hl.dispatch(hl.dsp.layout("focus left"))
+	hl.dispatch(hl.dsp.layout("focus right"))
+end)
+hl.bind(mainMod .. " + code:21", function() -- plus key (US)
+	hl.dispatch(hl.dsp.layout("colresize 0.667"))
+	hl.dispatch(hl.dsp.layout("focus left"))
+	hl.dispatch(hl.dsp.layout("focus right"))
+end)
+hl.bind(mainMod .. " + code:19", function() -- 0 key
+	hl.dispatch(hl.dsp.layout("colresize 0.5"))
+	hl.dispatch(hl.dsp.layout("focus left"))
+	hl.dispatch(hl.dsp.layout("focus right"))
+end)
+hl.bind(mainMod .. " + " .. otherMod .. " + L", function()
 	hl.dispatch(hl.dsp.layout("swapcol r"))
 	hl.dispatch(hl.dsp.layout("focus left"))
 	hl.dispatch(hl.dsp.layout("focus right"))
 end)
-hl.bind(mainMod .. " + " .. otherMod .. " + left", function()
+hl.bind(mainMod .. " + " .. otherMod .. " + H", function()
 	hl.dispatch(hl.dsp.layout("swapcol l"))	
 	hl.dispatch(hl.dsp.layout("focus right"))
 	hl.dispatch(hl.dsp.layout("focus left"))
@@ -103,9 +118,19 @@ hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))
 hl.bind(mainMod .. " + up",    hl.dsp.focus({ direction = "up" }))
 hl.bind(mainMod .. " + down",  hl.dsp.focus({ direction = "down" }))
 
+-- move focus with mainMod + vim style keys (h j k l)
+hl.bind(mainMod .. " + H",  hl.dsp.focus({ direction = "left" }))
+hl.bind(mainMod .. " + L", hl.dsp.focus({ direction = "right" }))
+hl.bind(mainMod .. " + K",    hl.dsp.focus({ direction = "up" }))
+hl.bind(mainMod .. " + J",  hl.dsp.focus({ direction = "down" }))
+
 -- move active window to workspace +1 or -1 with maindMod + ALT + LEFT or RIGHT
 hl.bind(mainMod .. " + " .. altMod ..  " + left", hl.dsp.window.move({ workspace = "-1" }))
 hl.bind(mainMod .. " + " .. altMod ..  " + right", hl.dsp.window.move({ workspace = "+1" }))
+
+-- move active window to workspace +1 or -1 with maindMod + ALT + H or L (vim style)
+hl.bind(mainMod .. " + " .. altMod ..  " + H", hl.dsp.window.move({ workspace = "-1" }))
+hl.bind(mainMod .. " + " .. altMod ..  " + L", hl.dsp.window.move({ workspace = "+1" }))
 
 -- switch workspaces with mainMod + [0-9]
 -- move active window to a workspace with mainMod + altMod + [0-9]
@@ -229,7 +254,6 @@ hl.config({
 			active_border   = "rgba(595959aa)",
 			inactive_border = "rgba(595959aa)",
 		},
-		
 		-- Set to true to enable resizing windows by clicking and dragging on borders and gaps
 		resize_on_border = false,
 		
