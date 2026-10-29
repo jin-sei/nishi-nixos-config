@@ -4,6 +4,7 @@
 	# packages (stable)
 	home.packages = (with pkgs; [
 		# general shell apps
+		yazi
 		tree
 		fortune
 		cowsay
