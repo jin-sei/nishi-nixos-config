@@ -24,11 +24,21 @@
 }
 
 .notification-group-collapse-button {
+  border: none;
   background-color: #F9E2AF;
+  box-shadow: 
+    0 0 3px rgba(0, 0, 0, 0.9),
+    0 0 8px rgba(0, 0, 0, 0.7),
+    0 0 16px rgba(0, 0, 0, 0.5);
 }
 
 .notification-group-close-all-button {
+  border: none;
   background-color: #F38BA8;
+  box-shadow: 
+    0 0 3px rgba(0, 0, 0, 0.9),
+    0 0 8px rgba(0, 0, 0, 0.7),
+    0 0 16px rgba(0, 0, 0, 0.5);
 }
 
 .notification-group-collapse-button image {
@@ -42,6 +52,11 @@
 .notification-group-header {
   font-size: 23px;
   font-weight: bold;
+  text-shadow: 
+    0 0 3px rgba(0, 0, 0, 0.9),
+    0 0 8px rgba(0, 0, 0, 0.7), 
+    0 0 16px rgba(0, 0, 0, 0.5),
+    0 0 24px rgba(0, 0, 0, 0.3);
 }
 
 .notification-background {
