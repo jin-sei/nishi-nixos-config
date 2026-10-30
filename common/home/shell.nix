@@ -19,6 +19,7 @@
 			matrix = "cmatrix -b -C green -u 10";
 			tt = "tt -notheme";
 			wc = "wl-copy";
+			nix-shell = "nix-shell --command zsh";
 			# vi = "nvim"; # already handled in neovim.nix by programs.neovim.viAlias = true;
   			# update = "sudo nixos-rebuild switch";
 		};
