@@ -1,15 +1,24 @@
 #!/usr/bin/env bash
 
-# When Rofi calls the script with NO arguments, return the menu items
+SCRIPT_DIR="$HOME/.config/rofi/scripts"
+
+# options of the top level actions shown in the actions menu
 if [ -z "$1" ]; then
-    echo "First Option"
-    echo "Second Option"
-    echo "Third Option"
+    echo "Layout"
+    echo "Wallpaper"
+    echo "Power"
+    echo "Cowsay"
 else
-    # When the user selects an option, $1 contains the chosen text
     case "$1" in
-        "First Option") notify-send "Selected 1" ;;
-        "Second Option") notify-send "Selected 2" ;;
-        "Third Option") notify-send "Selected 3" ;;
+	# actions triggered after selecting an action
+        "Layout") "$SCRIPT_DIR/layout-menu.sh" ;;
+        "Wallpaper") "$SCRIPT_DIR/wallpaper-menu.sh" ;;
+        "Power") "$SCRIPT_DIR/power-menu.sh" ;;
+	"Cowsay") notify-send "Daily Fortune" "$(fortune)" ;;
+
+	# routing answers to subscripts
+	"Dwindle"|"Master"|"Scrolling"|"Monocle")
+            "$SCRIPT_DIR/layout-menu.sh" "$1" 
+            ;;
     esac
 fi
