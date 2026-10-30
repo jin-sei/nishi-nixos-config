@@ -1,8 +1,54 @@
 { config, lib, pkgs, inputs, isLaptop ? false, ... }:
 let
 	waybarEtiquetteColor = "#5A5555";
+
+	browser = "zen-beta.desktop";
+	viewer = "org.pwmt.zathura.desktop";
+	editor = "nvim-wrapper.desktop";
 in
 {
+	# a
+	xdg.desktopEntries.nvim-wrapper = {
+		name = "Neovim wrapper";
+		comment = "custom neovim wrapper";
+		icon = "nvim" ;
+		exec = "alacritty -e nvim %F"; 
+		terminal = false;
+		categories = [ "TextEditor" ];
+	};
+
+	# for default applications to open files with
+	xdg.mimeApps = {
+		enable = true;
+		
+		defaultApplications = {
+			# Web and Links
+			"text/html" = browser;
+			"x-scheme-handler/http" = browser;
+			"x-scheme-handler/https" = browser;
+			"x-scheme-handler/about" = browser;
+			"x-scheme-handler/unknown" = browser;
+			"x-scheme-handler/dzr" = "dev.aunetx.deezer.desktop";
+			"x-scheme-handler/deezer" = "dev.aunetx.deezer.desktop";
+		
+			# PDFs and Images
+			"application/pdf" = viewer;
+			"image/png" = viewer;
+			"image/jpeg" = viewer;
+			"image/gif" = viewer;
+			"image/webp" = viewer;
+			"image/svg+xml" = viewer;
+		
+			# Text and Code
+			"text/plain" = editor;
+			"text/markdown" = editor;
+			"text/csv" = editor;
+			"application/json" = editor;
+			"application/xml" = editor;
+			"application/x-subrip" = editor; 
+		};
+	};
+
 	# services: hyprpolkitagent
 	systemd.user.services.hyprpolkitagent = {
 		Unit = {
