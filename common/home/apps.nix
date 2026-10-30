@@ -97,7 +97,7 @@
 
 	# obsidian
 	home.file."Vault/jinsei-obsidian/.obsidian/themes/OLED.Black" = {
-		source = inputs.self + "/miscellaneous/themes/obsidian" ;
+		source = inputs.self + "/dotfiles/obsidian" ;
 		recursive = true;
 	};
 	programs.obsidian = {
@@ -113,7 +113,7 @@
 	};
 		
 	# mpv
-	xdg.configFile."mpv/scripts".source = inputs.self + "/miscellaneous/dotfiles/mpv";
+	xdg.configFile."mpv/scripts".source = inputs.self + "/dotfiles/mpv";
 	programs.mpv = {
 		enable = true;
 		# scripts = [ pkgs.mpvScripts.mpvacious ];

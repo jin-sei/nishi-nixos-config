@@ -26,7 +26,7 @@ in
 		enable = true;
 		settings = {
 			general = {
-				import = [ (inputs.self + "/miscellaneous/themes/alacritty/iv-spade.toml") ];
+				import = [ (inputs.self + "/dotfiles/alacritty/iv-spade.toml") ];
 				working_directory = "None";
 			};
 			window = {
@@ -39,29 +39,35 @@ in
 	};
 
 	# rofi
-	programs.rofi = {
+	xdg.configFile."rofi/scripts" = { # placing the scripts in the home directory
+		executable = true;
+		source = inputs.self + "/dotfiles/rofi/scripts";
+	 	target = "rofi/scripts";
+	};
+	programs.rofi = { # configuration
 		enable = true;
-		theme = inputs.self + "/miscellaneous/themes/rofi/zen-rofi.rasi";
+		theme = inputs.self + "/dotfiles/rofi/zen-rofi.rasi";
 		extraConfig = {
 			show-icons = true;
+			modes = "drun,actions:${config.home.homeDirectory}/.config/rofi/scripts/actions.sh,ssh,filebrowser,recursivebrowser";
 		};
 	};
 	
 	# swaync (notifications)
 	xdg.configFile."swaync" = {
-		source = inputs.self + "/miscellaneous/dotfiles/swaync";
+		source = inputs.self + "/dotfiles/swaync";
 	 	target = "swaync";
 	};
 
 	# hyprland
 	xdg.configFile."hyprland" = {
-		source = inputs.self + "/miscellaneous/dotfiles/hypr/hyprland.lua";
+		source = inputs.self + "/dotfiles/hypr/hyprland.lua";
 	 	target = "hypr/hyprland.lua";
 	};
 
 	# hyprlock
 	xdg.configFile."hyprlock" = {
-		source = inputs.self + "/miscellaneous/dotfiles/hypr/hyprlock.conf";
+		source = inputs.self + "/dotfiles/hypr/hyprlock.conf";
 		target = "hypr/hyprlock.conf";
 	};
 	xdg.configFile."hyprlock-wallpaper" = {
@@ -70,7 +76,7 @@ in
 		''
 		background {
 			monitor =
-			path = ${ inputs.self + "/miscellaneous/wallpapers/grey-undertow.jpeg" }
+			path = ${ inputs.self + "/wallpapers/grey-undertow.jpeg" }
 		}
 		'';
 	};
@@ -84,7 +90,7 @@ in
 	    			{
 	      			fit_mode = "cover";
 	      			monitor = "";
-	      			path = "${ inputs.self + "/miscellaneous/wallpapers/grey-undertow.jpeg" }";
+	      			path = "${ inputs.self + "/wallpapers/grey-undertow.jpeg" }";
 	    			}
 			];
 		};
@@ -109,7 +115,7 @@ in
 	
 	# waybar
 	xdg.configFile."waybar/style.css" = {
-		source = inputs.self + "/miscellaneous/dotfiles/waybar/style.css";
+		source = inputs.self + "/dotfiles/waybar/style.css";
 	 	target = "waybar/style.css";
 	};
 	programs.waybar = {

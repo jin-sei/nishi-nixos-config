@@ -3,7 +3,7 @@
 {
 	# neovim lua config files
 	xdg.configFile."nvim/lua" = {
-		source = inputs.self + "/miscellaneous/dotfiles/neovim/lua";
+		source = inputs.self + "/dotfiles/neovim/lua";
 	 	target = "nvim/lua";
 		recursive = true;
 	};
