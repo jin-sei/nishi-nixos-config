@@ -5,6 +5,7 @@ if [ -z "$1" ]; then
     echo "Master"
     echo "Scrolling"
     echo "Monocle"
+    echo "Back"
 else
     case "$1" in
         "Dwindle")

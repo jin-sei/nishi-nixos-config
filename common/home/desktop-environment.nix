@@ -86,6 +86,10 @@ in
 		enable = true;
 		settings = {
 	  		splash = false;
+			preload = [
+      				"${inputs.self}/wallpapers/grey-undertow.jpeg"
+      				"${inputs.self}/wallpapers/grey-net-of-beings.png"
+    			];
 	  		wallpaper = [
 	    			{
 	      			fit_mode = "cover";

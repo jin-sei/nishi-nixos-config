@@ -3,7 +3,7 @@
 SCRIPT_DIR="$HOME/.config/rofi/scripts"
 
 # options of the top level actions shown in the actions menu
-if [ -z "$1" ]; then
+if [ -z "$1" ] || [ "$1" == "Back" ]; then
     echo "Layout"
     echo "Wallpaper"
     echo "Power"
@@ -20,5 +20,14 @@ else
 	"Dwindle"|"Master"|"Scrolling"|"Monocle")
             "$SCRIPT_DIR/layout-menu.sh" "$1" 
             ;;
+	
+	"Power off"|"Hibernate"|"Suspend"|"Lock screen")
+            "$SCRIPT_DIR/power-menu.sh" "$1" 
+            ;;
+	
+    	"Undertow"|"Net of Beings")
+            "$SCRIPT_DIR/wallpaper-menu.sh" "$1" 
+            ;;
+
     esac
 fi
