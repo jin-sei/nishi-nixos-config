@@ -128,6 +128,7 @@
 		nerd-fonts.symbols-only
 		noto-fonts-cjk-sans
 		mplus-outline-fonts.githubRelease
+		source-han-serif
 	];
 
 	# enable zsh system-wide to source necessary files
