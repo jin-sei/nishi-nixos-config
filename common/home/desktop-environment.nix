@@ -122,7 +122,7 @@ in
 		''
 		background {
 			monitor =
-			path = ${inputs.self + "/wallpapers/rearview-mirror.jpg"}
+			path = ${inputs.self + "/wallpapers/grey-undertow.jpeg"}
 		}
 		'';
 	};
