@@ -3,6 +3,8 @@
 if [ -z "$1" ]; then
     echo "Undertow"
     echo "Net of Beings"
+    echo "Rearview"
+    echo "Honda"
     echo "Back"
 else
     case "$1" in
@@ -11,6 +13,12 @@ else
 		;;
         "Net of Beings")
 		hyprctl hyprpaper wallpaper ",/home/jinsei/nishi-nixos-config/wallpapers/grey-net-of-beings.png"
+		;;
+	"Rearview")
+		hyprctl hyprpaper wallpaper ",/home/jinsei/nishi-nixos-config/wallpapers/rearview-mirror.jpg"	
+		;;
+        "Honda")
+		hyprctl hyprpaper wallpaper ",/home/jinsei/nishi-nixos-config/wallpapers/honda.png"
 		;;
     esac
 fi

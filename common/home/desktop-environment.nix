@@ -122,7 +122,7 @@ in
 		''
 		background {
 			monitor =
-			path = ${ inputs.self + "/wallpapers/grey-undertow.jpeg" }
+			path = ${inputs.self + "/wallpapers/rearview-mirror.jpg"}
 		}
 		'';
 	};
@@ -135,12 +135,14 @@ in
 			preload = [
       				"${inputs.self}/wallpapers/grey-undertow.jpeg"
       				"${inputs.self}/wallpapers/grey-net-of-beings.png"
+      				"${inputs.self}/wallpapers/honda.png"
+      				"${inputs.self}/wallpapers/rearview-mirror.jpg"
     			];
 	  		wallpaper = [
 	    			{
 	      			fit_mode = "cover";
 	      			monitor = "";
-	      			path = "${ inputs.self + "/wallpapers/grey-undertow.jpeg" }";
+	      			path = "${ inputs.self + "/wallpapers/rearview-mirror.jpg" }";
 	    			}
 			];
 		};

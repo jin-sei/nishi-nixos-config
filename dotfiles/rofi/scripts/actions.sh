@@ -29,7 +29,7 @@ else
             "$SCRIPT_DIR/power-menu.sh" "$1" 
             ;;
 	
-    	"Undertow"|"Net of Beings")
+    	"Undertow"|"Net of Beings"|"Honda"|"Rearview")
             "$SCRIPT_DIR/wallpaper-menu.sh" "$1" 
             ;;
 
