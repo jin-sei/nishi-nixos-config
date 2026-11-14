@@ -15,7 +15,7 @@ else
 		hyprctl hyprpaper wallpaper ",/home/jinsei/nishi-nixos-config/wallpapers/grey-net-of-beings.png"
 		;;
 	"Rearview")
-		hyprctl hyprpaper wallpaper ",/home/jinsei/nishi-nixos-config/wallpapers/rearview-mirror.jpg"	
+		hyprctl hyprpaper wallpaper ",/home/jinsei/nishi-nixos-config/wallpapers/rearview-mirror.png"	
 		;;
         "Honda")
 		hyprctl hyprpaper wallpaper ",/home/jinsei/nishi-nixos-config/wallpapers/honda.png"

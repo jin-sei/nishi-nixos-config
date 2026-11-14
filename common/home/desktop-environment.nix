@@ -136,13 +136,13 @@ in
       				"${inputs.self}/wallpapers/grey-undertow.jpeg"
       				"${inputs.self}/wallpapers/grey-net-of-beings.png"
       				"${inputs.self}/wallpapers/honda.png"
-      				"${inputs.self}/wallpapers/rearview-mirror.jpg"
+      				"${inputs.self}/wallpapers/rearview-mirror.png"
     			];
 	  		wallpaper = [
 	    			{
 	      			fit_mode = "cover";
 	      			monitor = "";
-	      			path = "${ inputs.self + "/wallpapers/rearview-mirror.jpg" }";
+	      			path = "${ inputs.self + "/wallpapers/rearview-mirror.png" }";
 	    			}
 			];
 		};
