@@ -13,9 +13,11 @@
 	# use nftables instead of iptables
 	networking.nftables.enable = true;
 
-	# for localsend	
-	networking.firewall.allowedTCPPorts = [ 53317 ];
-	networking.firewall.allowedUDPPorts = [ 53317 ];	
+	networking.firewall.allowedTCPPorts = [ 
+		53317 	# localsend
+		5006 	# actual budget
+	];
+	networking.firewall.allowedUDPPorts = [ 53317 ]; # localsend	
 	
 	# Pipewire (audio)
 	security.rtkit.enable = true;

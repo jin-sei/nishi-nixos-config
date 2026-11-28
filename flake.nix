@@ -67,6 +67,7 @@
 					./modules/system/syncthing.nix
 					./modules/system/laptop-utils.nix
 					./modules/system/steam.nix
+					./modules/system/actual-budget.nix
 					./hosts/laptop/default.nix
 					./hosts/laptop/hardware-configuration.nix
 				];
