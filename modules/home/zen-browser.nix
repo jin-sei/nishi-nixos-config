@@ -23,6 +23,7 @@
 
 			"https://letterboxd.com"
 			"https://serializd.com"
+			"https://bunpro.jp"
 
 			"https://duckduckgo.com"
 			"https://duck.ai"
